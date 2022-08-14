@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 40%;
+        margin: 0 auto;
+        border: 1px solid black;
+      }
+      ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      li {
+        width: 30%;
+        background: pink;
+        list-style-type: none;
+        text-align: center;
+        line-height: 25px;
+      }
+      li:hover {
+        background: blue;
+      }
+      .item {
+        display: none;
+      }
+      .active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li data-index="1">标题1</li>
+        <li data-index="2">标题2</li>
+        <li data-index="3">标题3</li>
+      </ul>
+      <div class="item active">内容1</div>
+      <div class="item">内容2</div>
+      <div class="item">内容3</div>
+    </div>
+    <script>
+      const ul = document.querySelector('ul')
+      const item = document.querySelectorAll('.item')
+      ul.addEventListener('click', (e) => {
+        console.log(e.target.dataset.index)
+        console.log(item[e.target.dataset.index - 1])
+        item.forEach((item, index) => {
+          if (index == e.target.dataset.index - 1) {
+            item.classList.add('active')
+          } else {
+            item.classList.remove('active')
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

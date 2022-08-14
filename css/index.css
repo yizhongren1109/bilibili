@@ -1,0 +1,2749 @@
+#app {
+  min-width: 1392px;
+}
+#app .topCon {
+  width: 100%;
+  height: 155px;
+  background-image: url(../imgs/zhankaitupian.png), url(../imgs/boli.png);
+  transition: all 0.3s linear;
+  background-size: 100% 310px;
+  position: relative;
+  overflow: hidden;
+}
+#app .topCon .navigation {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+#app .topCon .navigation .navigationLeft ul {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  height: 64px;
+}
+@keyframes run {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+#app .topCon .navigation .navigationLeft ul li:not(.cancel):hover {
+  animation: run 0.4s;
+}
+#app .topCon .navigation .navigationLeft ul li {
+  height: 64px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationLeft ul li a {
+  color: #fff;
+  display: inline-block;
+  height: 100%;
+  line-height: 64px;
+  margin: 0 15px 0 0;
+}
+#app .topCon .navigation .navigationLeft ul li a svg {
+  vertical-align: text-top;
+}
+#app .topCon .navigation .searchBar {
+  width: 438.2px;
+  height: 40px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 6px;
+}
+#app .topCon .navigation .searchBar input {
+  width: 377px;
+  height: 32px;
+  margin-top: 2px;
+  border: none;
+  font-size: 14px;
+}
+#app .topCon .navigation .navigationRight ul {
+  display: flex;
+  font-size: 13px;
+  height: 50px;
+  align-items: center;
+}
+#app .topCon .navigation .navigationRight ul li {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationRight ul li a:not(.portrait):hover svg {
+  animation: run 0.4s;
+}
+#app .topCon .navigation .navigationRight ul li a {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  align-items: center;
+  height: 100%;
+}
+#app .topCon .navigation .navigationRight ul li a img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+#app .topCon .navigation .navigationRight ul li a:not(.portrait) {
+  padding-top: 7px;
+}
+#app .topCon .navigation .navigationRight li:nth-child(1) {
+  margin-right: 10px;
+}
+#app .topCon .navigation .navigationRight li:nth-child(7) {
+  margin-right: 15px;
+  width: 52px;
+}
+#app .topCon .navigation .navigationRight li:nth-child(8) {
+  margin-right: 35px;
+}
+#app .topCon .navigation .navigationRight li:nth-child(8) a {
+  width: 100px;
+}
+#app .topCon .navigation .navigationRight li:nth-child(8) a div:hover {
+  background-color: #ffaec5;
+}
+#app .topCon .navigation .navigationRight li:nth-child(8) a div {
+  width: 90px;
+  height: 34px;
+  background: #fb7299;
+  border-radius: 8px;
+  line-height: 34px;
+  margin: auto;
+  transition: background-color 0.3s;
+}
+#app .topCon .navigation .navigationRight li:nth-child(8) a div svg {
+  vertical-align: middle;
+}
+#app .topCon .banner {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 64px;
+  cursor: pointer;
+}
+#app .topCon .banner a img {
+  width: 162px;
+  height: 78px;
+}
+#app .topCon .shut {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(204, 204, 204, 0.5);
+  box-sizing: border-box;
+  padding-top: 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: none;
+}
+#app .topCon .shut img {
+  width: 24px;
+  height: 24px;
+}
+#app .topCon .figure {
+  position: absolute;
+  left: 27%;
+  top: 0%;
+  z-index: 0;
+  cursor: pointer;
+}
+#app .topCon .figure video {
+  height: 310px;
+  display: block;
+}
+#app .topCon .Game {
+  position: absolute;
+  top: 49px;
+  right: 240px;
+  cursor: pointer;
+}
+#app .topCon .Game video {
+  height: 222px;
+  display: block;
+}
+#app .topCon .Games {
+  position: absolute;
+  top: 83px;
+  right: 142px;
+  cursor: pointer;
+}
+#app .topCon .Games video {
+  height: 38px;
+  display: block;
+}
+#app .mainCenter {
+  height: 5100px;
+  margin: 0 64px;
+}
+#app .mainCenter .TestChannel {
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .TestChannel .TestChannelLeft {
+  display: flex;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+  font-size: 14px;
+  align-items: center;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a div {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  margin-bottom: 6px;
+  transition: background 0.3s;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a div svg {
+  width: 25px;
+  height: 25px;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a span {
+  color: #18191c;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:first-child div {
+  background: #ff9212;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:first-child div:hover {
+  background-color: #ff9e2c;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:nth-child(2) div {
+  background: #f07775;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:nth-child(2) div:hover {
+  background: #f38e8c;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:nth-child(3) div {
+  background: #59ca73;
+}
+#app .mainCenter .TestChannel .TestChannelLeft a:nth-child(3) div:hover {
+  background: #6cd083;
+}
+#app .mainCenter .TestChannel .TestChannelRight {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl {
+  display: grid;
+  grid-column: span 4;
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-right: 1px solid #e3e5e7;
+  width: 902px;
+  position: relative;
+  padding-right: 30px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a {
+  display: block;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  border: 1px solid #f1f2f3;
+  color: #61666d;
+  background-color: #f6f7f8;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a .son {
+  position: absolute;
+  height: 130px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  width: 280%;
+  transform: translateX(-25%);
+  transition: all 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a .son > li {
+  font-size: 13px;
+  padding: 0 5px;
+  height: 32px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a .son > li:hover {
+  background-color: #e3e5e7;
+  border-radius: 5px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a svg {
+  width: 10px;
+  height: 10px;
+  transform: rotateZ(90deg);
+  transition: all 0.3s linear;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a:hover svg {
+  transform: rotateZ(270deg);
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a:nth-child(2n + 1) .son {
+  bottom: 110%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a:nth-child(2n) .son {
+  top: 110%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a:nth-child(2n + 1):hover ul {
+  visibility: visible;
+  opacity: 1;
+  bottom: 130%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl > a:nth-child(2n):hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 130%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChannelRightl a:hover {
+  background-color: #e3e5e7;
+  color: #18191c;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr {
+  width: 240px;
+  grid-column: span 1;
+  grid-row-gap: 10px;
+  grid-auto-flow: column;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  flex-shrink: 0;
+  box-sizing: border-box;
+  flex: 1;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a {
+  display: flex;
+  transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+  justify-content: flex-end;
+  color: #61666d;
+  position: relative;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+  transition: fill 0.3s;
+  fill: #61666d;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a span {
+  font-size: 14px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a ul {
+  position: absolute;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 280%;
+  transform: translateX(95px);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s linear;
+  padding: 8px 10px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a ul > li {
+  color: #61666d;
+  font-size: 13px;
+  padding: 0 5px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr a ul > li:hover {
+  background-color: #e3e5e7;
+  border-radius: 5px;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr > a:nth-child(2n):hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 130%;
+}
+#app .mainCenter .TestChannel .TestChannelRight .TestChanneRightr > a:nth-child(2n) ul {
+  top: 110%;
+}
+#app .mainCenter .main {
+  height: 470px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  position: relative;
+}
+#app .mainCenter .main .container {
+  height: 82%;
+  position: relative;
+  width: 39%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .main .container .img-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: -1;
+  padding-bottom: 15%;
+}
+#app .mainCenter .main .container .img-box > img {
+  display: block;
+  width: 100%;
+}
+#app .mainCenter .main .container .box-footer {
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  padding-left: 15px;
+}
+#app .mainCenter .main .container .box-footer .title {
+  font-size: 18px;
+  color: white;
+  padding: 10px 0;
+}
+#app .mainCenter .main .container .box-footer ul {
+  margin-left: 2px;
+  display: flex;
+  list-style-type: none;
+}
+#app .mainCenter .main .container .box-footer ul .active {
+  width: 14px;
+  height: 14px;
+  margin: 1px;
+  background: white;
+}
+#app .mainCenter .main .container .box-footer ul li {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+}
+#app .mainCenter .main .container .mengceng {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(0, #2f3238 22%, transparent 40%);
+}
+#app .mainCenter .main .VIDEO_MENU {
+  width: 840px;
+  height: 470px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+#app .mainCenter .main .VIDEO_MENU .first {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+}
+#app .mainCenter .main .VIDEO_MENU .first a #img {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .main .VIDEO_MENU .first a #img img {
+  width: 100%;
+}
+#app .mainCenter .main .VIDEO_MENU .first a .danmu {
+  position: absolute;
+  display: flex;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+  left: 100%;
+}
+#app .mainCenter .main .VIDEO_MENU .first a .danmu li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+#app .mainCenter .main .VIDEO_MENU .first a .danmu:nth-of-type(1) {
+  top: 0;
+}
+#app .mainCenter .main .VIDEO_MENU .first a .danmu:nth-of-type(2) {
+  top: 30px;
+}
+#app .mainCenter .main .VIDEO_MENU .first a .danmu:nth-of-type(3) {
+  top: 60px;
+}
+#app .mainCenter .main .VIDEO_MENU .first a video {
+  display: block;
+  width: 268px;
+  height: 151px;
+  opacity: 0.2;
+  border-radius: 6px;
+  background-color: #000;
+  transition: all 1s linear;
+}
+#app .mainCenter .main .VIDEO_MENU .first .transit {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .main .VIDEO_MENU .first .transit div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .main .VIDEO_MENU .first .transit div span {
+  margin-right: 12px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .transit div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .transit span {
+  color: #fff;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce {
+  width: 269px;
+  height: 64px;
+  margin-top: 10px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 44px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce h3 a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .main .VIDEO_MENU .first .introduce > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .main .btn {
+  position: absolute;
+  right: -48px;
+  z-index: 2;
+  top: 0%;
+}
+#app .mainCenter .main .btn button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .main .btn button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  height: auto;
+  width: 40px;
+  padding: 9px;
+  align-items: center;
+  border: none;
+  background-color: #f6f7f8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#app .mainCenter .main .btn button svg {
+  width: 12px;
+  height: 12px;
+  margin-bottom: 6px;
+  transition: all 0.5s ease;
+}
+#app .mainCenter .main .btn button span {
+  font-size: 12px;
+}
+#app .mainCenter .delegators {
+  width: 1391px;
+  height: 271px;
+  margin-top: 34px;
+  margin-bottom: 56px;
+}
+#app .mainCenter .delegators .delegatorTop {
+  height: 34px;
+  margin-bottom: 12px;
+}
+#app .mainCenter .delegators .delegatorTop .delegatorTopL {
+  display: flex;
+}
+#app .mainCenter .delegators .delegatorTop .delegatorTopL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+}
+#app .mainCenter .delegators .delegatorTop .delegatorTopL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .delegators .delegatorsBottom {
+  display: flex;
+  justify-content: space-between;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg {
+  width: 268px;
+  height: 225px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a {
+  cursor: pointer;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a #imgStatic {
+  width: 268px;
+  height: 151px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a #imgStatic img {
+  width: 100%;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 44px;
+  color: #18191c;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting h3 img {
+  width: 32px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting h3:hover {
+  color: #00aeec;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting > div {
+  margin-top: 4px;
+  color: #9499a0;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting > div svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting > div:hover {
+  color: #00aeec;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a #img2 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a #img2 img {
+  width: 100%;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a video {
+  display: block;
+  width: 268px;
+  height: 151px;
+  opacity: 0.5;
+  border-radius: 6px;
+  background-color: #000;
+  transition: all 2s linear;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .transition {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .transition div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .transition div span {
+  margin-right: 12px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .transition div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .transition span {
+  color: #fff;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 44px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct h3 a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB .introduct > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Competition {
+  width: 1391px;
+  height: 271px;
+  margin-bottom: 56px;
+}
+#app .mainCenter .Competition .CompetitionTop {
+  height: 34px;
+  margin-bottom: 12px;
+}
+#app .mainCenter .Competition .CompetitionTop .CompetitionTopL {
+  display: flex;
+}
+#app .mainCenter .Competition .CompetitionTop .CompetitionTopL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+}
+#app .mainCenter .Competition .CompetitionTop .CompetitionTopL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .Competition .CompetitionBottom {
+  display: flex;
+  justify-content: space-between;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a #img3 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a #img3 img {
+  width: 100%;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a video {
+  display: block;
+  width: 268px;
+  height: 151px;
+  opacity: 0.2;
+  border-radius: 6px;
+  background-color: #000;
+  transition: all 2s linear;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatv {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatv div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatv div span {
+  margin-right: 12px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatv div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatv span {
+  color: #fff;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 {
+  font-size: 15px;
+  margin-right: 16px;
+  height: 44px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a > div {
+  height: 18px;
+  font-size: 12px;
+  border: 1px solid #ff6699;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  padding-right: 4px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a > div img {
+  width: 12px;
+  height: 12px;
+  margin: 0 3px 0 4px;
+  vertical-align: bottom;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a > div span {
+  color: #ff6699;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a > span {
+  font-weight: 600;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext h3 a > span:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF .sinatvtext > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Picture {
+  margin-bottom: 56px;
+}
+#app .mainCenter .Picture a img {
+  width: 100%;
+}
+#app .mainCenter .broadcast {
+  height: 473px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 56px;
+}
+#app .mainCenter .broadcast .broadcastLeft {
+  width: 1111px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderL {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderL a {
+  display: inline-block;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > button {
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > button svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a #img4 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a #img4 img {
+  width: 100%;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a video {
+  display: block;
+  width: 268px;
+  height: 151px;
+  opacity: 0.2;
+  border-radius: 6px;
+  background-color: #000;
+  transition: all 2s linear;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertv {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertv div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertv div span {
+  margin-right: 12px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertv div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertv span {
+  color: #fff;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext {
+  width: 269px;
+  height: 42px;
+  margin-top: 10px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 {
+  font-size: 15px;
+  margin-right: 16px;
+  height: 22px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a > div {
+  height: 18px;
+  font-size: 12px;
+  border: 1px solid #ff6699;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  padding-right: 4px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a > div img {
+  width: 12px;
+  height: 12px;
+  margin: 0 3px 0 4px;
+  vertical-align: bottom;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a > div span {
+  color: #ff6699;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a > span {
+  font-weight: 600;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext h3 a > span:hover {
+  color: #00aeec;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF .broadcastFootertvtext > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .broadcast .broadcastRight {
+  width: 268px;
+  margin-left: 12px;
+}
+#app .mainCenter .broadcast .broadcastRight > ul {
+  display: flex;
+  padding-left: 6px;
+  height: 30px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+#app .mainCenter .broadcast .broadcastRight > ul .active {
+  color: #00aeec;
+  border-bottom: 2px solid #00aeec;
+}
+#app .mainCenter .broadcast .broadcastRight > ul li {
+  margin-right: 10px;
+  font-size: 14px;
+}
+#app .mainCenter .broadcast .broadcastRight .item {
+  display: none;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li {
+  width: 250px;
+  height: 60.6px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  margin: 2px 0;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > span {
+  margin-right: 6px;
+  color: #c9ccd0;
+  font-weight: 600;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon {
+  display: flex;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .icons {
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 4px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .icons img {
+  width: 36px;
+  height: 36px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > span {
+  display: flex;
+  padding-left: 6px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > span:hover h3 {
+  color: #00aeec;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > span img {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > span h3 {
+  color: #18191c;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > div {
+  display: flex;
+  color: #9499a0;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li > a .icon .forecast > div > div img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li:nth-child(2n) {
+  background-color: #f6f7f8;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li:nth-child(1) > span {
+  color: #ff473d;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li:nth-child(2) > span {
+  color: #ff6a29;
+}
+#app .mainCenter .broadcast .broadcastRight .item .first li:nth-child(3) > span {
+  color: #ff9214;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li {
+  width: 250px;
+  height: 60.6px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  margin: 2px 0;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon {
+  display: flex;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .icons {
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 8px;
+  width: 36px;
+  height: 36px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .icons img {
+  width: 100%;
+  height: 100%;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > span {
+  display: flex;
+  padding-left: 6px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > span:hover {
+  color: #00aeec;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > span img {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > span h3 {
+  color: #18191c;
+  font-weight: 600;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > span h3:hover {
+  color: #00aeec;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > div {
+  display: flex;
+  color: #9499a0;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > div p {
+  width: 151px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .second li > a .icon .forecast > div > div img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .third {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 424px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .third li img {
+  width: 268px;
+  height: 151px;
+  border-radius: 6px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .third li h3 {
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .broadcast .broadcastRight .item .third li:last-child {
+  margin-top: 16px;
+}
+#app .mainCenter .broadcast .broadcastRight .active {
+  display: block;
+}
+#app .mainCenter .cartoon {
+  height: 516px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 56px;
+}
+#app .mainCenter .cartoon .cartoonLeft {
+  width: 1111px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderL {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+  vertical-align: middle;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderL a {
+  display: inline-block;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > button {
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > button svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 470px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a #img5 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a #img5 img {
+  width: 100%;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a video {
+  display: block;
+  width: 268px;
+  height: 151px;
+  opacity: 0.5;
+  border-radius: 6px;
+  background-color: #000;
+  transition: all 2s linear;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTv {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTv div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTv div span {
+  margin-right: 12px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTv div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTv span {
+  color: #fff;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 44px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText h3 a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF .cartoonTvText > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .cartoon .cartoonRight {
+  width: 267px;
+  margin-left: 12px;
+  /*         //上
+        .cartoonRightTop {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .cartoonRightTopLeft {
+            font-size: 24px;
+            padding-left: 15px;
+            &:hover {
+              color: #00aeec;
+            }
+          }
+          .cartoonRightTopRight {
+            display: flex;
+            border-radius: 8px;
+            border: 1px solid #e3e5e7;
+            align-items: center;
+            padding: 8px 12px;
+            &:hover {
+              background-color: #e3e5e7;
+            }
+            span {
+              font-size: 13px;
+            }
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+        //排行榜下
+        .cartoonRightBottom {
+          padding-top: 14px;
+          ul {
+            border: 1px solid #f1f2f3;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 8px;
+
+            > li:first-child {
+              height: 55px;
+              display: flex;
+              align-items: center;
+              padding: 15px 0;
+              position: relative;
+              .Appear {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                // display: none;
+                width: 110%;
+                height: 100px;
+                //background: pink;
+                transition: all 0.3s linear;
+                padding: 10px;
+                border-radius: 8px;
+                z-index: 1;
+                background: #fff;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                .AppearT {
+                  display: flex;
+                  justify-content: space-between;
+                  h3 {
+                    width: 70%;
+                  }
+                }
+                .AppearB {
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 10px;
+                  padding-top: 10px;
+                  border-top: 1px solid #e0e0e0;
+
+                  > span {
+                    display: flex;
+                    width: 60px;
+                    align-items: center;
+                    svg {
+                      width: 12px;
+                      height: 12px;
+                      color: #999;
+                    }
+                    .sp {
+                      width: 45px;
+                      color: #999;
+                    }
+                  }
+                }
+              }
+              > span {
+                margin-right: 6px;
+                width: 20px;
+                text-align: center;
+                color: #ff473d;
+                font-weight: 600;
+              }
+              img {
+                width: 90px;
+                height: 56px;
+                margin-right: 6px;
+                border-radius: 6px;
+              }
+              h3 {
+                width: 50%;
+                &:hover {
+                  color: #00aeec;
+                }
+              }
+            }
+            .cartoonRightBottomOther {
+              height: 55px;
+              display: flex;
+              align-items: center;
+              position: relative;
+              .Appear {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                // display: none;
+                width: 110%;
+                height: 100px;
+                //background: pink;
+                transition: all 0.3s linear;
+                padding: 10px;
+                border-radius: 8px;
+                z-index: 1;
+                background: #fff;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                .AppearT {
+                  display: flex;
+                  justify-content: space-between;
+                  h3 {
+                    width: 70%;
+                  }
+                  img {
+                    width: 90px;
+                    height: 56px;
+                    margin-right: 6px;
+                    border-radius: 6px;
+                  }
+                }
+                .AppearB {
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 10px;
+                  padding-top: 10px;
+                  border-top: 1px solid #e0e0e0;
+
+                  > span {
+                    display: flex;
+                    width: 60px;
+                    align-items: center;
+                    svg {
+                      width: 12px;
+                      height: 12px;
+                      color: #999;
+                    }
+                    .sp {
+                      width: 45px;
+                      color: #999;
+                    }
+                  }
+                }
+              }
+              > span {
+                margin-right: 6px;
+                width: 20px;
+                text-align: center;
+                color: #ff473d;
+                font-weight: 600;
+              }
+              h3 {
+                &:hover {
+                  color: #00aeec;
+                }
+              }
+            }
+
+            li:nth-child(2n) {
+              background-color: #f6f7f8;
+            }
+          }
+        } */
+}
+#app .mainCenter .bangum {
+  height: 516px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 56px;
+}
+#app .mainCenter .bangum .bangumLeft {
+  width: 1111px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+  vertical-align: middle;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL a {
+  display: inline-block;
+  margin-right: 10px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime button {
+  padding: 6px 15px;
+  border-radius: 14px;
+  font-size: 14px;
+  color: inherit;
+  border: none;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 470px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a {
+  display: block;
+  height: 68%;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a #img5 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a #img5 img {
+  width: 100%;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div > span {
+  margin-right: 12px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div > span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > span {
+  color: #fff;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 28px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div {
+  display: flex;
+  margin-top: 4px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a {
+  display: flex;
+  color: #9499a0;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  fill: #9499a0;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a span:nth-child(3) {
+  margin-left: 4px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .bangum .bangumRight {
+  width: 267px;
+  margin-left: 12px;
+}
+#app .mainCenter .Dynamic {
+  height: 516px;
+  width: 100%;
+  margin-bottom: 56px;
+}
+#app .mainCenter .Dynamic .DynamicHeader {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderL a {
+  display: inline-block;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > button {
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > button svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Dynamic .DynamicFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 470px;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF {
+  width: 268px;
+  height: 225px;
+  position: relative;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF a {
+  display: block;
+  height: 68%;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF a #img6 {
+  width: 268px;
+  height: 151px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  transition: all 2s linear;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF a #img6 img {
+  width: 100%;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterTV {
+  display: flex;
+  padding: 16px 8px 6px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  top: 113px;
+  border-radius: 6px;
+  height: 38px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  width: 268px;
+  align-items: center;
+  justify-content: space-between;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterTV div {
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterTV div span {
+  margin-right: 12px;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterTV div span svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 4px;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterTV span {
+  color: #fff;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterText {
+  width: 269px;
+  height: 44px;
+  margin-top: 10px;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterText h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 16px;
+  height: 44px;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterText h3 a {
+  color: #18191c;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+#app .mainCenter .Dynamic .DynamicFooter .DynamicFooterF .DynamicFooterText h3 a:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Comic {
+  height: 644px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 56px;
+}
+#app .mainCenter .Comic .ComicLeft {
+  width: 1111px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+  vertical-align: middle;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL a {
+  display: inline-block;
+  margin-right: 10px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL .ComicHeaderType button {
+  padding: 6px 15px;
+  border-radius: 14px;
+  font-size: 14px;
+  color: inherit;
+  border: none;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > button {
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > button svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 600px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter .ComicFooterfirst {
+  cursor: pointer;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter .ComicFooterfirst .ComicFooterfirstT img {
+  width: 175px;
+  height: 235px;
+  border-radius: 6px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter .ComicFooterfirst .ComicFooterfirstB {
+  margin-top: 10px;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter .ComicFooterfirst .ComicFooterfirstB h3:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Comic .ComicLeft .ComicFooter .ComicFooterfirst .ComicFooterfirstB p {
+  color: #9499a0;
+  margin-top: 4px;
+}
+#app .mainCenter .Comic .ComicRight {
+  width: 268px;
+  margin-left: 12px;
+}
+#app .mainCenter .Comic .ComicRight > ul {
+  display: flex;
+  padding-left: 6px;
+  height: 30px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  align-items: center;
+}
+#app .mainCenter .Comic .ComicRight > ul .arise {
+  color: #00aeec;
+  border-bottom: 2px solid #00aeec;
+}
+#app .mainCenter .Comic .ComicRight > ul li {
+  margin-right: 10px;
+  font-size: 14px;
+}
+#app .mainCenter .Comic .ComicRight > ul span {
+  margin-left: 85px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  display: block;
+  width: 58px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+#app .mainCenter .Comic .ComicRight .items {
+  display: none;
+}
+#app .mainCenter .Comic .ComicRight .items ul {
+  cursor: pointer;
+}
+#app .mainCenter .Comic .ComicRight .items ul li {
+  padding: 0 8px;
+}
+#app .mainCenter .Comic .ComicRight .items ul li > span {
+  color: #c9ccd0;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one > span {
+  margin-right: 6px;
+  color: #ff473d;
+  font-weight: 600;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one img {
+  width: 81px;
+  height: 102px;
+  border-radius: 4px;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one .oright {
+  padding-left: 10px;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one .oright:hover h3 {
+  color: #00aeec;
+}
+#app .mainCenter .Comic .ComicRight .items ul .one .jieshao {
+  margin-top: 32px;
+  color: #9499a0;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:not(.one) {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:not(.one) span {
+  margin-right: 6px;
+  font-weight: 600;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:not(.one) div {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  align-items: center;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:not(.one) div p {
+  color: #9499a0;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:not(.one) div:hover h3 {
+  color: #00aeec;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:nth-child(2) > span {
+  color: #ff6a29;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:nth-child(3) > span {
+  color: #ff9214;
+}
+#app .mainCenter .Comic .ComicRight .items ul li:nth-child(2n) {
+  background-color: #f6f7f8;
+}
+#app .mainCenter .Comic .ComicRight .arise {
+  display: block;
+}
+#app .mainCenter .Feature {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 56px;
+}
+#app .mainCenter .Feature .FeatureLeft {
+  width: 1111px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader {
+  height: 34px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderL {
+  display: flex;
+  align-items: center;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderL svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 6px;
+  align-items: center;
+  vertical-align: middle;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderL a {
+  display: inline-block;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderL a span {
+  font-size: 24px;
+  color: #18191c;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR {
+  font-size: 13px;
+  display: flex;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > button {
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > button svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > button:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > a {
+  margin-left: 8px;
+  border: 1px solid #e3e5e7;
+  border-radius: 6px;
+  height: 31px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #18191c;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > a svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > a:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 444px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem {
+  display: flex;
+  align-items: center;
+  width: 362px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem > a > div {
+  width: 127px;
+  height: 94px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem > a > div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR {
+  margin-left: 12px;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR .pictureRT h3 {
+  color: #18191c;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR p {
+  margin-top: 8px;
+  color: #9499a0;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR .pictureRB {
+  display: flex;
+  color: #9499a0;
+  line-height: 0;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR .pictureRB svg {
+  width: 16px;
+  height: 16px;
+}
+#app .mainCenter .Feature .FeatureRight {
+  width: 267px;
+  margin-left: 12px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopLeft {
+  font-size: 24px;
+  padding-left: 15px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopLeft:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopRight {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #e3e5e7;
+  align-items: center;
+  padding: 8px 12px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopRight:hover {
+  background-color: #e3e5e7;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopRight span {
+  font-size: 13px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightTop .FeatureRightTopRight svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom {
+  margin-top: 10px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul {
+  border: 1px solid #f1f2f3;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:first-child {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:first-child > span {
+  margin-right: 6px;
+  width: 20px;
+  text-align: center;
+  color: #ff473d;
+  font-weight: 600;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:first-child img {
+  width: 90px;
+  height: 56px;
+  margin-right: 6px;
+  border-radius: 6px;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:first-child h3 {
+  width: 50%;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:first-child h3:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul .FeatureRightBottomOther {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul .FeatureRightBottomOther > span {
+  margin-right: 6px;
+  width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul .FeatureRightBottomOther h3:hover {
+  color: #00aeec;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:nth-child(2) > span {
+  color: #ff6a29;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:nth-child(3) > span {
+  color: #ff9214;
+}
+#app .mainCenter .Feature .FeatureRight .FeatureRightBottom ul li:nth-child(2n) {
+  background-color: #f6f7f8;
+}
+#app .appFooter {
+  height: 410px;
+  width: 100%;
+  background-color: #f6f7f8;
+  padding-top: 30px;
+}
+#app .appFooter .appFooterCenter {
+  height: 100%;
+  margin: 0 64px;
+}
+#app .appFooter .appFooterCenter .link-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+#app .appFooter .appFooterCenter .link-box .boxLeft {
+  width: 370px;
+}
+#app .appFooter .appFooterCenter .link-box .boxLeft span {
+  display: block;
+  margin-bottom: 10px;
+  height: 20px;
+  color: #9499a0;
+  font-size: 16px;
+}
+#app .appFooter .appFooterCenter .link-box .boxLeft > div a {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  line-height: 24px;
+  color: #18191c;
+}
+#app .appFooter .appFooterCenter .link-box .boxCenter {
+  width: 450px;
+}
+#app .appFooter .appFooterCenter .link-box .boxCenter span {
+  display: block;
+  margin-bottom: 10px;
+  height: 20px;
+  color: #9499a0;
+  font-size: 16px;
+}
+#app .appFooter .appFooterCenter .link-box .boxCenter > div a {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  line-height: 24px;
+  color: #18191c;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 22px;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight > div span {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight > div span svg {
+  color: #fff;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight > div p {
+  text-align: center;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight1 span {
+  background-color: #3752c8;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight1 span svg {
+  width: 26px;
+  height: 26px;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight2 span {
+  background-color: #00aeec;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight2 span svg {
+  width: 56px;
+  height: 56px;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight3 span {
+  background-color: #db4437;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight3 span svg {
+  width: 34px;
+  height: 34px;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight4 span {
+  background-color: #57bb40;
+}
+#app .appFooter .appFooterCenter .link-box .boxRight .boxRight4 span svg {
+  width: 34px;
+  height: 34px;
+}
+#app .appFooter .appFooterCenter .split-line {
+  margin: 0 auto;
+  width: 80%;
+  height: 1px;
+  background-color: #e3e5e7;
+}
+#app .appFooter .appFooterCenter .other-link {
+  display: flex;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  color: #9499a0;
+}
+#app .appFooter .appFooterCenter .other-link .other-linkCenter {
+  flex-shrink: 0;
+  margin: 0 auto;
+  width: 1086px;
+  text-align: center;
+}
+#app .appFooter .appFooterCenter .other-link .other-linkCenter .other-linkCenter1 .text1 {
+  margin-right: 8px;
+  color: #9499a0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+}
+#app .appFooter .appFooterCenter .text-con {
+  margin: 0 auto;
+  width: 400px;
+}
+#app .appFooter .appFooterCenter .text-con img {
+  display: inline-block;
+  margin-right: 20px;
+  width: 96px;
+  height: 39px;
+}
+.cartoonRightTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cartoonRightTop .cartoonRightTopLeft {
+  font-size: 24px;
+  padding-left: 15px;
+}
+.cartoonRightTop .cartoonRightTopLeft:hover {
+  color: #00aeec;
+}
+.cartoonRightTop .cartoonRightTopRight {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #e3e5e7;
+  align-items: center;
+  padding: 8px 12px;
+}
+.cartoonRightTop .cartoonRightTopRight:hover {
+  background-color: #e3e5e7;
+}
+.cartoonRightTop .cartoonRightTopRight span {
+  font-size: 13px;
+}
+.cartoonRightTop .cartoonRightTopRight svg {
+  width: 12px;
+  height: 12px;
+}
+.cartoonRightBottom {
+  padding-top: 14px;
+}
+.cartoonRightBottom ul {
+  border: 1px solid #f1f2f3;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.cartoonRightBottom ul > li > span {
+  color: #c9ccd0;
+}
+.cartoonRightBottom ul > li:first-child {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+.cartoonRightBottom ul > li:first-child .Appear {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 110%;
+  height: 100px;
+  transition: all 0.3s linear;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearT {
+  display: flex;
+  justify-content: space-between;
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearT h3 {
+  width: 70%;
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearB > span {
+  display: flex;
+  width: 60px;
+  align-items: center;
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearB > span svg {
+  width: 12px;
+  height: 12px;
+  color: #999;
+}
+.cartoonRightBottom ul > li:first-child .Appear .AppearB > span .sp {
+  width: 45px;
+  color: #999;
+}
+.cartoonRightBottom ul > li:first-child > span {
+  margin-right: 6px;
+  width: 20px;
+  text-align: center;
+  color: #ff473d;
+  font-weight: 600;
+}
+.cartoonRightBottom ul > li:first-child img {
+  width: 90px;
+  height: 56px;
+  margin-right: 6px;
+  border-radius: 6px;
+}
+.cartoonRightBottom ul > li:first-child h3 {
+  width: 50%;
+}
+.cartoonRightBottom ul > li:first-child h3:hover {
+  color: #00aeec;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 110%;
+  height: 100px;
+  transition: all 0.3s linear;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearT {
+  display: flex;
+  justify-content: space-between;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearT h3 {
+  width: 70%;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearT img {
+  width: 90px;
+  height: 56px;
+  margin-right: 6px;
+  border-radius: 6px;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearB {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearB > span {
+  display: flex;
+  width: 60px;
+  align-items: center;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearB > span svg {
+  width: 12px;
+  height: 12px;
+  color: #999;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther .Appear .AppearB > span .sp {
+  width: 45px;
+  color: #999;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther > span {
+  margin-right: 6px;
+  width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.cartoonRightBottom ul .cartoonRightBottomOther h3:hover {
+  color: #00aeec;
+}
+.cartoonRightBottom ul li:nth-child(2) > span {
+  color: #ff6a29;
+}
+.cartoonRightBottom ul li:nth-child(3) > span {
+  color: #ff9214;
+}
+.cartoonRightBottom ul li:nth-child(2n) {
+  background-color: #f6f7f8;
+}

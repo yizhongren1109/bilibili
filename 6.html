@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">11</div>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+
+      const dataList = [
+        "ajfea121",
+        "ajfea121421122",
+        "ajfadae1ea1",
+        "ajwkljglakw",
+      ];
+
+      const nextHtml = dataList.reduce((prev, cur) => {
+        return (prev += `<li style='color: red'>${cur}</li>`);
+      }, "");
+
+      console.log(nextHtml);
+
+      wrapper.innerHTML = nextHtml;
+    </script>
+  </body>
+</html>

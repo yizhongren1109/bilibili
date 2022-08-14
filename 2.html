@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        display: inline-block;
+      }
+      img {
+        width: 268px;
+        height: 151px;
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+        transition: all 0.3s linear;
+      }
+      video {
+        width: 268px;
+        height: 151px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="">
+        <img src="./imgs/1.webp" alt="" id="img" />
+        <video
+          src="./imgs/书单分享  想要提升文笔 来看看这30本书！ - 1.书单分享  想要提升文笔 来看看这30本书！(Av259044845,P1).mp4"
+          controls
+          muted
+        ></video
+      ></a>
+    </div>
+
+    <script>
+      let div = document.querySelector("div");
+      let video = document.querySelector("video");
+      div.onmouseenter = function () {
+        video.play();
+        img.style.opacity = 0;
+      };
+      div.onmouseleave = function () {
+        video.pause();
+        img.style.opacity = 1;
+      };
+    </script>
+  </body>
+</html>
