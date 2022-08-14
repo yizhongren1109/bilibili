@@ -291,12 +291,12 @@
     // 每页多少数据
     pageSize = 6;
   const render = function render() {
-    let str = "";
-    videoData.forEach((item, index) => {
+/*     let str = "";
+     videoData.forEach((item, index) => {
       // (page - 1) * pageSize <= index && index < page * pageSize
       // 第一页0-5
       // 第二页6-11
-      let {
+      const {
         src,
         imgsrc,
         videosrc,
@@ -365,8 +365,82 @@
         </div>
       </div>`;
       }
-    });
-    VIDEO_MENU.innerHTML = str;
+    });  */
+
+
+    const strhtml = videoData.reduce((prev,cur,index)=>{
+      const {
+        src,
+        imgsrc,
+        videosrc,
+        num,
+        vnum,
+        time,
+        title,
+        namesrc,
+        name,
+        data,
+      } = cur;
+      if ((page - 1) * pageSize <= index && index < page * pageSize) {
+        prev += `<div class="first">
+        <a
+          href="${src}"
+          target="_blank"
+        >
+          <div id="img">
+            <img
+              src="${imgsrc}"
+              alt=""
+            />
+          </div>
+          <ul class="danmu"></ul>
+          <ul class="danmu"></ul>
+          <ul class="danmu"></ul>
+          <video
+            src="${videosrc}"
+            muted
+          ></video>
+        </a>
+   
+        <div class="transit">
+          <div>
+            <span>
+              <svg class="bili-video-card__stats--icon">
+                <use xlink:href="#widget-video-play-count"></use>
+              </svg>
+              <span>${num}</span>
+            </span>
+            <span>
+              <svg class="bili-video-card__stats--icon">
+                <use xlink:href="#widget-video-danmaku"></use>
+              </svg>
+              <span>${vnum}</span>
+            </span>
+          </div>
+          <span>${time}</span>
+        </div>
+        <div class="introduce">
+          <h3>
+            <a href="${src}">${title}</a
+            >
+          </h3>
+          <div>
+            <a
+              href="${namesrc}"
+            >
+              <svg class="bili-video-card__info--owner__up">
+                <use xlink:href="#widget-up"></use>
+              </svg>
+              <span>${name}</span>
+              <span>${data}</span>
+            </a>
+          </div>
+        </div>
+      </div>`;
+      }
+      return prev
+    },"")
+    VIDEO_MENU.innerHTML = strhtml;
   };
 
   render();
@@ -439,35 +513,15 @@
       });
     });
   }
-  // 渲染danmu盒子（添加li数据）
-  // function addData() {
-  //   barrage.forEach((item1, index1) => {
-  //     // 将数据分别给三个danmu加入数据
-  //     danmu.forEach((item2, index2) => {
-  //       // 将数据分成三份
-  //       if (index1 % 3 == index2) {
-  //         // 给li添加字体颜色 自定义一个属性espeed（速度）
-  //         item2.innerHTML += `<li style="margin-left:50px;color:${setColor()};" espeed="${setSpeed()}">${item1}</li>`;
-  //       }
-  //     });
-  //   });
-  // }
-  // addData();
-
-  // 弹幕里的li
-  // const li = document.querySelectorAll(".danmu li");
-  // 绑定移入事件
-
-  // 绑定移出事件
 
   //推广区域移入移出事件====================================
-  const adddelegators = function adddelegators() {
-    let imgh = document.querySelectorAll(".delegatorsB>a");
+  const adddelegators = function adddelegators(imghClassName=".delegatorsB>a",opacity=0.2,transitionClassName=".transition") {
+    let imgh = document.querySelectorAll(imghClassName);
     console.log(imgh);
     imgh.forEach((item) => {
       let video = item.querySelector("video"),
         imgo = item.querySelector("img"),
-        transition = item.parentNode.querySelector(".transition");
+        transition = item.parentNode.querySelector(transitionClassName);
       item.onmouseenter = function () {
         video.play();
         video.style.opacity = 1;
@@ -477,7 +531,7 @@
       item.onmouseleave = function () {
         video.pause();
         imgo.style.opacity = 1;
-        video.style.opacity = 0.2;
+        video.style.opacity = opacity;
         transition.style.opacity = 1;
       };
     });
@@ -485,7 +539,7 @@
   adddelegators();
 
   //赛事区域移入移出事件==========================================
-  const Competition = function Competition() {
+/*   const Competition = function Competition() {
     let imgh = document.querySelectorAll(".CompetitionBottomF>a");
     imgh.forEach((item) => {
       let video = item.querySelector("video"),
@@ -500,37 +554,41 @@
       item.onmouseleave = function () {
         video.pause();
         imgo.style.opacity = 1;
-        video.style.opacity = 0.5;
+        video.style.opacity = 0.2;
         sinatv.style.opacity = 1;
       };
     });
-  };
-  Competition();
+  }; */
+  adddelegators(".CompetitionBottomF>a",0.2,".sinatv");
 
-  //直播右侧选项卡切换=========================================
+  //直播右侧选项卡切换=================================================================================================
   const cut = function cut() {
     let ul = document.querySelector(".broadcastRight>ul");
     let li = ul.querySelectorAll("li");
     let item = document.querySelectorAll(".item");
     ul.addEventListener("click", (e) => {
+      
       if (e.target.tagName == "LI") {
         let type = e.target.getAttribute("data-index");
+        
         console.log(item[type]);
         item.forEach((item, index) => {
-          if (index == type) {
-            item.classList.add("active");
-            li[index].classList.add("active");
+          const key = index==type?"add":"remove"
+          item.classList[key]("active");
+          li[index].classList[key]("active");
+/*           if (index == type) {
+
           } else {
             item.classList.remove("active");
             li[index].classList.remove("active");
-          }
+          } */
         });
       }
     });
   };
   cut();
 
-  //排行榜移入移出效果
+  //排行榜移入移出效果=========================================================================================================
   const appear = document.querySelectorAll(".Ranking>li");
   console.log(appear);
   appear.forEach((item) => {
@@ -543,8 +601,6 @@
 
       e.target.children[0].style.visibility = "visible";
     });
-  });
-  appear.forEach((item) => {
     item.addEventListener("mouseleave", (e) => {
       console.log(e.target.children[0]);
       e.target.children[0].style.bottom = e.target.offsetHeight + "px";
@@ -554,4 +610,5 @@
       // e.target.children[0].style.display = "none";
     });
   });
+
 })();
