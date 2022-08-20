@@ -742,6 +742,38 @@ import {
     bangumrender();
   };
   //导航栏效果========================================================================================================
+  //节流函数
+  const throttle = function throttle(func, wait) {
+    if (typeof func !== "function")
+      throw new TypeError("func must be an function");
+    if (typeof wait !== "number") wait = 300;
+    let timer,
+      previous = 0;
+    return function proxy(...params) {
+      let now = +new Date(),
+        remaining = wait - (now - previous),
+        self = this,
+        result;
+      if (remaining <= 0) {
+        if (timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+        result = func.call(self, ...params);
+        previous = now;
+      } else if (!timer) {
+        timer = setTimeout(() => {
+          if (timer) {
+            clearTimeout(timer);
+            timer = null;
+          }
+          result = func.call(self, ...params);
+          previous = +new Date();
+        }, remaining);
+      }
+      return result;
+    };
+  };
   let html = document.documentElement;
   let navigation = document.querySelector(".navigation");
   let navigationLeft = document.querySelectorAll(".navigationLeft>ul>li>a");
@@ -770,8 +802,6 @@ import {
   inp.onclick = () => {
     searchBar.style.background = "#fff";
   };
-
-  window.onscroll = fixed;
 
   // 番剧切换=========================================
 
@@ -854,4 +884,52 @@ import {
     bangumFooter.innerHTML = str;
   };
   bangumstateRender(bangumstateData.filter((item) => item.recently == "1"));
+
+  //回到顶部
+
+  const btnscroll = document.querySelector(".btn2");
+  const watchScroll = function watchScroll() {
+    if (html.scrollTop >= html.clientHeight) {
+      btnscroll.style.visibility = "visible";
+      btnscroll.style.opacity = 1;
+      return;
+    }
+    btnscroll.style.visibility = "hidden";
+    btnscroll.style.opacity = 0;
+    console.log("111");
+    fixed();
+  };
+  btnscroll.onclick = function () {
+    let step = 50;
+    let timer = setInterval(() => {
+      html.scrollTop -= step;
+      if (html.scrollTop <= 0) {
+        clearInterval(timer);
+        html.scrollTop = 0;
+        window.onscroll = watchScroll;
+      }
+    }, 16);
+  };
+  window.onscroll = throttle(watchScroll, 500);
+
+  //遮罩层效果===================================================
+  const mask = document.querySelector(".zone-mask");
+  const zone = document.querySelector(".zone");
+  const zoneBtn=document.querySelector('.innerFooterWrap .innerFooterWrapItem')
+  const innerBox=document.querySelector('.zone-mask .inner')
+
+  zone.addEventListener('click',function () {
+    mask.style.opacity = 1;
+    mask.style.visibility = "visible";
+    innerBox.style.right=0
+  });
+  mask.addEventListener('click',function(e){
+    mask.style.opacity = 0;
+    mask.style.visibility = "hidden";
+    innerBox.style.right='-100%'
+  })
+  innerBox.addEventListener('click',(e)=>{
+    e.stopPropagation()
+  })
+
 })();
