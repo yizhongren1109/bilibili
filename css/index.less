@@ -3,31 +3,35 @@
   // 顶部容器
   .topCon {
     width: 100%;
-    height: 155px;
-    background-image: url(../imgs/zhankaitupian.png), url(../imgs/boli.png);
-
-    transition: all 0.3s linear;
-    background-size: 100% 310px;
+    height: 196px;
+    margin-top: -20px;
+    transition: all 0.5s linear;
     position: relative;
     overflow: hidden;
 
     // 导航
     .navigation {
+      width: 100%;
       height: 64px;
       display: flex;
       justify-content: space-between;
-
       align-items: center;
-
       padding: 0 24px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      visibility: visible;
+      z-index: 99;
+      transition: all 0.2s linear;
 
       //左侧导航栏
       .navigationLeft {
-        ul {
+        > ul {
           display: flex;
           font-size: 14px;
           align-items: center;
           height: 64px;
+          position: relative;
 
           @keyframes run {
             0% {
@@ -43,11 +47,11 @@
             }
           }
 
-          li:not(.cancel):hover {
+          > li:not(.cancel):hover {
             animation: run 0.4s;
           }
 
-          li {
+          > li {
             height: 64px;
             cursor: pointer;
 
@@ -57,9 +61,263 @@
               height: 100%;
               line-height: 64px;
               margin: 0 15px 0 0;
+              transition: all 0.2s linear;
 
               svg {
                 vertical-align: text-top;
+              }
+            }
+          }
+          //直播hover
+          .Satellite {
+            position: absolute;
+            top: 80%;
+
+            background-color: #fff;
+            display: flex;
+            border-radius: 8px;
+            width: 116%;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s linear;
+            border: 1px solid #e0e0e0;
+            .SatelliteLeft {
+              width: 100%;
+              padding: 20px 0 20px 20px;
+              .SatelliteLeftF {
+                margin-bottom: 16px;
+              }
+              .SatelliteLeftB {
+                height: 198px;
+
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                border-right: 1px solid #e0e0e0;
+                padding-right: 10px;
+
+                div {
+                  cursor: pointer;
+                  img {
+                    width: 68px;
+                    height: 68px;
+                    border-radius: 50%;
+                  }
+                  p:hover {
+                    color: #00aeec;
+                  }
+                }
+              }
+            }
+            .SatelliteRight {
+              padding: 20px;
+              div {
+                img {
+                  border-radius: 5px;
+                  margin-top: 18px;
+                }
+              }
+            }
+          }
+
+          //游戏中心hover
+          .gameCenter {
+            position: absolute;
+            top: 80%;
+            display: flex;
+            border-radius: 8px;
+            width: 86%;
+            padding: 20px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s linear;
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            .gameCenterLeft {
+              padding-right: 20px;
+              border-right: 1px solid #e0e0e0;
+              .gameCenterLeftH {
+                img {
+                  width: 230px;
+                  height: 129px;
+                  border-radius: 6px;
+                }
+              }
+              .gameCenterLeftF {
+                height: 108px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+                img {
+                  width: 66px;
+                  height: 66px;
+                  border-radius: 15px;
+                }
+                .gameCenterLeftFL,
+                .gameCenterLeftFC,
+                .gameCenterLeftFR {
+                  div {
+                    width: 66px;
+                  }
+                }
+              }
+            }
+            .gameCenterRight {
+              padding: 0 20px;
+              > ul {
+                position: relative;
+                li {
+                  padding: 7px 0;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  color: #61666d;
+                  img {
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    top: 10%;
+                    left: 100%;
+                    border-radius: 6px;
+                    display: none;
+                  }
+                }
+                li:hover {
+                  background-color: #e3e5e7;
+                }
+                li:hover img {
+                  display: block;
+                }
+              }
+            }
+          }
+          //漫画hover
+          .animator {
+            position: absolute;
+            height: 218px;
+            background-color: #fff;
+            width: 91%;
+            top: 80%;
+            left: 20%;
+            visibility: hidden;
+            opacity: 0;
+            padding: 20px;
+            display: flex;
+            border-radius: 8px;
+            transition: all 0.3s linear;
+            border: 1px solid #e0e0e0;
+            .animatorLeft {
+              display: flex;
+              flex-wrap: wrap;
+              width: 345px;
+              justify-content: space-between;
+              padding-right: 20px;
+              border-right: 1px solid #e0e0e0;
+              img {
+                width: 136px;
+                height: 77px;
+                border-radius: 6px;
+              }
+              p:hover {
+                color: #00aeec;
+              }
+            }
+            .animatorRight {
+              margin-left: 20px;
+              width: 27%;
+              h2 {
+                margin-bottom: 10px;
+              }
+              ul {
+                position: relative;
+              }
+              li {
+                color: #61666d;
+                padding: 6px 0;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+              li:hover {
+                background-color: #e3e5e7;
+              }
+              li:hover img {
+                display: block;
+              }
+              img {
+                position: absolute;
+                width: 165%;
+                display: none;
+                top: -15%;
+                left: 105%;
+                border-radius: 8px;
+              }
+              .animatorRight1 {
+                color: #ff473d;
+              }
+              .animatorRight2 {
+                color: #ff6a29;
+              }
+              .animatorRight3 {
+                color: #ff9214;
+              }
+            }
+          }
+
+          //下载hover
+          .down {
+            position: absolute;
+            display: flex;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            top: 80%;
+            visibility: hidden;
+            opacity: 0;
+            left: 55%;
+            width: 60%;
+            height: 230%;
+            border-radius: 8px;
+            justify-content: space-between;
+            transition: all 0.3s linear;
+            svg {
+              width: 16px;
+              height: 16px;
+              vertical-align: middle;
+            }
+            .sub {
+              font-size: 12px;
+              color: #61666d;
+              margin: 5px 0;
+            }
+            .downLeft {
+              text-align: center;
+              border-right: 1px solid #e0e0e0;
+              padding-right: 25px;
+              img {
+                width: 87px;
+                height: 87px;
+              }
+            }
+
+            .downRight {
+              text-align: center;
+              img {
+                width: 52px;
+                height: 52px;
+              }
+              .download {
+                background-color: #00aeec;
+                border-radius: 5px;
+                width: 70px;
+                height: 25px;
+                line-height: 25px;
+                color: #fff;
+                margin: 5px 0 0 13px;
+                cursor: pointer;
+              }
+
+              .download:hover {
+                background-color: rgba(0, 174, 236, 0.5);
               }
             }
           }
@@ -68,11 +326,14 @@
 
       //搜索框
       .searchBar {
-        width: 438.2px;
+        width: 438px;
         height: 40px;
         background-color: #fff;
         z-index: 1;
-        border-radius: 6px;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        position: relative;
 
         input {
           width: 377px;
@@ -80,18 +341,88 @@
           margin-top: 2px;
           border: none;
           font-size: 14px;
+          margin-right: 18px;
+          padding-left: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+        }
+        input:focus ~ .searchBarFocus {
+          display: block;
+        }
+        input:focus {
+          background-color: #e3e5e7;
+        }
+        .sousuo {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-items: center;
+
+          svg {
+            width: 17px;
+            height: 17px;
+          }
+        }
+        .searchBarFocus {
+          display: none;
+          padding: 15px 0;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 530%;
+          background-color: #fff;
+          border: 1px solid #e0e0e0;
+          border-radius: 0 0 5px 5px;
+          border-top: none;
+          border-right: none;
+          .FocusHeader {
+            font-size: 16px;
+            color: #18191c;
+            padding-left: 16px;
+          }
+          .FocusFooter {
+            display: flex;
+            justify-content: space-between;
+          }
+          .focusItem {
+            cursor: pointer;
+            width: 213px;
+            box-sizing: border-box;
+            display: flex;
+            padding-left: 16px;
+            height: 38px;
+            align-items: center;
+            font-size: 14px;
+            color: #18191c;
+            div:nth-child(1) {
+              margin-right: 7px;
+            }
+            div:nth-child(2) {
+              margin-right: 6px;
+            }
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+          .focusItem:hover {
+            background-color: #e3e5e7;
+          }
         }
       }
 
       //右侧导航栏
       .navigationRight {
-        ul {
+        > ul {
           display: flex;
           font-size: 13px;
           height: 50px;
           align-items: center;
+          position: relative;
 
-          li {
+          > li {
             width: 50px;
             height: 50px;
             cursor: pointer;
@@ -123,117 +454,567 @@
               padding-top: 7px;
             }
           }
-        }
-
-        li:nth-child(1) {
-          margin-right: 10px;
-        }
-
-        li:nth-child(7) {
-          margin-right: 15px;
-          width: 52px;
-        }
-
-        li:nth-child(8) {
-          margin-right: 35px;
-
-          a {
-            width: 100px;
-
-            div:hover {
-              background-color: #ffaec5;
-            }
-
-            div {
-              width: 90px;
-              height: 34px;
-              background: #fb7299;
-              border-radius: 8px;
-              line-height: 34px;
-              margin: auto;
-              transition: background-color 0.3s;
-
-              svg {
-                vertical-align: middle;
+          .photo {
+            margin-right: 10px;
+            transition: all 0.3s linear;
+            z-index: 3;
+            //头像hover
+            > .photoHover {
+              visibility: hidden;
+              opacity: 0;
+              width: 300px;
+              height: 381px;
+              top: 80%;
+              left: -31%;
+              z-index: -1;
+              box-sizing: border-box;
+              border-radius: 10px;
+              padding-left: 18px;
+              padding-right: 18px;
+              background-color: #fff;
+              position: absolute;
+              padding-top: 40px;
+              text-align: center;
+              transition: all 0.3s linear;
+              border: 1px solid #e0e0e0;
+              .photoHover1 {
+                font-size: 18px;
+                color: #18191c;
+                margin-bottom: 5px;
               }
+              .photoHover2 {
+                display: flex;
+                justify-content: center;
+                div {
+                  margin: 0 5px;
+                }
+              }
+              .photoHover3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                position: relative;
+                svg {
+                  width: 10%;
+                  height: 30px;
+                }
+                .planup {
+                  width: 75%;
+                  height: 3px;
+                  background-color: #c9ccd0;
+                }
+                .plan {
+                  position: absolute;
+                  width: 50%;
+                  height: 3px;
+                  background-color: #f3cb85;
+                  top: 44%;
+                  left: 15%;
+                }
+                .exp {
+                  border: 1px solid #e0e0e0;
+                  border-radius: 8px;
+                  text-align: left;
+                  position: absolute;
+                  width: 65%;
+                  left: 90%;
+                  top: -200%;
+                  opacity: 0;
+                  transition: all 0.3s linear;
+                  visibility: hidden;
+                  background-color: #fff;
+                  padding: 20px;
+                  .vip {
+                    color: #00aeec;
+                  }
+                  > div {
+                    p {
+                      margin-bottom: 12px;
+                      margin-left: 20px;
+                    }
+                  }
+                  .vipgrade {
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+              //经验hover
+              .photoHover3:hover .exp {
+                opacity: 1;
+                visibility: visible;
+                left: 100%;
+              }
+              .photoHover4 {
+                color: #e3e5e7;
+              }
+              .photoHover5 {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 40px;
+
+                margin-bottom: 12px;
+                margin-top: 6px;
+                .photoHover5Item {
+                  div:first-child {
+                    font-size: 18px;
+                  }
+                }
+              }
+              .photoHover6 {
+                display: flex;
+                padding: 0 20px;
+                height: 38px;
+                align-items: center;
+                justify-content: space-between;
+                color: #61666d;
+                border-radius: 6px;
+                cursor: pointer;
+                .photoHover6Item {
+                  display: flex;
+                  align-items: center;
+                  font-size: 14px;
+
+                  svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 16px;
+                  }
+                }
+                > svg {
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+              .photoHover6:hover {
+                background-color: #e3e5e7;
+              }
+              .photoHover7 {
+                width: 90%;
+                height: 2px;
+                background-color: #e3e5e7;
+                margin: 12px 0 12px 12px;
+              }
+              .photoHover8 {
+                display: flex;
+                padding: 0 20px;
+                height: 38px;
+                align-items: center;
+                justify-content: space-between;
+                color: #61666d;
+                border-radius: 6px;
+                cursor: pointer;
+                .photoHover6Item {
+                  display: flex;
+                  align-items: center;
+                  font-size: 14px;
+
+                  svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 16px;
+                  }
+                }
+                > svg {
+                  width: 10px;
+                  height: 10px;
+                }
+                .letter {
+                  text-align: left;
+                  position: absolute;
+                  top: 50%;
+                  left: 80%;
+                  width: 30%;
+                  opacity: 0;
+                  transition: all 0.3s linear;
+                  visibility: hidden;
+                  height: 40%;
+                  padding: 20px;
+                  background-color: #fff;
+                  border-radius: 6px;
+                  border: 1px solid #e0e0e0;
+                  > div {
+                    height: 38px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 5px;
+                  }
+                  > div:hover {
+                    background-color: #e3e5e7;
+                  }
+                }
+              }
+              .photoHover8:hover .letter {
+                opacity: 1;
+                visibility: visible;
+                left: 90%;
+              }
+              .photoHover8:hover {
+                background-color: #e3e5e7;
+              }
+            }
+          }
+          .photo:hover .photoHover {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+          }
+
+          li:nth-of-type(7) {
+            margin-right: 15px;
+            width: 52px;
+          }
+
+          li:nth-of-type(8) {
+            margin-right: 35px;
+            width: auto;
+
+            a {
+              width: 100px;
+
+              div:hover {
+                background-color: #ffaec5;
+              }
+
+              div {
+                width: 90px;
+                height: 34px;
+                background: #fb7299;
+                border-radius: 8px;
+                line-height: 34px;
+                margin: auto;
+                transition: background-color 0.3s;
+
+                svg {
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+          .photo:hover a {
+            transform: translate(-30px, 20px);
+            transition: all 0.3s linear;
+          }
+          .photo:hover img {
+            transform: scale(1.8);
+            transition: all 0.3s linear;
+          }
+          .bigVip {
+            position: absolute;
+            width: 47%;
+            height: 380%;
+            top: 80%;
+            left: -12%;
+            opacity: 0;
+            transition: all 0.3s linear;
+            visibility: hidden;
+            padding: 16px 20px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            .bigVip1 {
+              margin-bottom: 12px;
+            }
+            .bigVip2 {
+              p {
+                margin-top: 6px;
+              }
+              p:hover {
+                color: #00aeec;
+              }
+            }
+            button {
+              width: 158px;
+              height: 40px;
+              border-radius: 6px;
+              background-color: #00b5e5;
+              border: none;
+              color: #fff;
+              margin-top: 10px;
+              margin-left: 40px;
+            }
+            img {
+              width: 239px;
+              height: 70px;
+              border-radius: 6px;
+            }
+          }
+          .news {
+            position: absolute;
+            width: 23%;
+            height: 370%;
+            top: 80%;
+            left: 15%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s linear;
+            padding: 10px 0px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            div {
+              padding: 10px 0 10px 27px;
+              font-size: 14px;
+              color: #61666d;
+            }
+            div:hover {
+              background-color: #e3e5e7;
+            }
+          }
+          .contribute {
+            display: flex;
+            position: absolute;
+            width: 61%;
+            height: 110%;
+            top: 80%;
+            left: 29%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s linear;
+            padding: 10px 5px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            position: absolute;
+
+            > div {
+              width: 62px;
+              height: 62px;
+              text-align: center;
+              border-radius: 5px;
+            }
+            div:hover {
+              background-color: #e3e5e7;
+            }
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .ram {
+            position: absolute;
+            width: 72%;
+            height: 500%;
+            top: 80%;
+            left: 0%;
+            background-color: #fff;
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s linear;
+            cursor: pointer;
+
+            ul {
+              display: flex;
+              li {
+                padding: 15px 0;
+                width: 124px;
+                text-align: center;
+                font-weight: bold;
+              }
+              .active {
+                color: #00aeec;
+                border-bottom: 2px solid #00aeec;
+              }
+            }
+            .ramItem {
+              .ramItem1 {
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+              }
+              .ramH {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .ramH::before {
+                content: "";
+                width: 35%;
+                display: block;
+                height: 1px;
+                background-color: #e3e5e7;
+              }
+              .ramH::after {
+                content: "";
+                width: 35%;
+                display: block;
+                height: 1px;
+                background-color: #e3e5e7;
+              }
+              display: none;
+              .ramItemhistory {
+                display: flex;
+                padding: 0 20px;
+                cursor: pointer;
+                div:first-child {
+                  img {
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 4px;
+                  }
+                }
+                div:last-child {
+                  img {
+                    width: 82px;
+                    height: 46px;
+                    border-radius: 4px;
+                    margin-top: 20px;
+                  }
+                }
+                .ramItemhistory1 {
+                  width: 226px;
+                  padding: 0 10px;
+                  p:first-child {
+                    color: #61666d;
+                  }
+                }
+              }
+              .ramItemhistory:hover {
+                background-color: #e3e5e7;
+              }
+            }
+            .active {
+              display: block;
             }
           }
         }
       }
     }
-
-    .banner {
-      display: flex;
-      align-items: flex-end;
-      margin-left: 64px;
-      cursor: pointer;
-
-      a {
-        img {
-          width: 162px;
-          height: 78px;
-        }
+    .bgi {
+      width: 100%;
+      display: block;
+    }
+    .image {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+    audio {
+      display: none;
+    }
+    .rain-bg {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    .video {
+      position: absolute;
+      height: auto;
+      display: block;
+    }
+    .raindrop1 {
+      width: 3.8%;
+      left: 0;
+      top: 0;
+    }
+    .raindrop2 {
+      width: 3%;
+      left: 8.5%;
+      top: 2%;
+    }
+    .play {
+      top: 12%;
+      width: 10.7%;
+      right: 16%;
+    }
+    .play-tv {
+      width: 4.7%;
+      right: 9.4%;
+      top: 27%;
+    }
+    .watch-tv {
+      animation: dnpms 5s linear infinite;
+    }
+    .person-video {
+      width: 27%;
+      top: 0;
+      left: 29.3%;
+    }
+    .iphone {
+      position: absolute;
+      top: 100%;
+      left: 40%;
+      width: 20%;
+      transition: all 0.3s linear;
+      img {
+        width: 100%;
+      }
+      .play-or-pause {
+        position: absolute;
+        top: 32%;
+        left: 45%;
+        width: 12%;
+        height: 12%;
+        cursor: pointer;
+        background: url(./imgs/animation/zanting.png);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .my-range {
+        -webkit-appearance: none;
+        background: transparent;
+        position: absolute;
+        width: 36%;
+        top: 82%;
+        left: 32%;
+        margin: 0;
+      }
+      .my-range:focus {
+        outline: none;
+      }
+      .my-range::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8px;
+        cursor: pointer;
+        background: #004a87;
+        border-radius: 4px;
+      }
+      .my-range::-webkit-slider-thumb {
+        border: 4px solid #ffffff;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: #004a87;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8px;
+      }
+      .my-range:focus::-webkit-slider-runnable-track {
+        background: #004a87;
       }
     }
-
-    .shut {
+    .close {
+      position: absolute;
+      right: 24px;
+      top: 24px;
       width: 36px;
       height: 36px;
-      background-color: rgba(204, 204, 204, 0.5);
-      box-sizing: border-box;
-      padding-top: 5px;
-      text-align: center;
-      cursor: pointer;
       border-radius: 4px;
-      position: absolute;
-      top: 25px;
-      right: 25px;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
       display: none;
-
       img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
         width: 24px;
         height: 24px;
+        transform: translate(-50%, -50%);
       }
     }
-
-    //看书人物
-    .figure {
+    .mask {
+      width: 100%;
+      height: 100%;
       position: absolute;
-      left: 27%;
-      top: 0%;
-      z-index: -0;
-      cursor: pointer;
-
-      video {
-        height: 310px;
-        display: block;
-      }
-    }
-
-    //玩游戏人物
-    .Game {
-      position: absolute;
-      top: 49px;
-      right: 240px;
-      cursor: pointer;
-
-      video {
-        height: 222px;
-        display: block;
-      }
-    }
-
-    //游戏页面
-    .Games {
-      position: absolute;
-      top: 83px;
-      right: 142px;
-      cursor: pointer;
-
-      video {
-        height: 38px;
-        display: block;
-      }
+      left: 0;
+      top: 0;
+      display: none;
     }
   }
   //主体内容  居中
@@ -478,10 +1259,9 @@
             opacity: 1;
             top: 130%;
           }
-          > a:nth-child(2n) ul{
+          > a:nth-child(2n) ul {
             top: 110%;
           }
-
         }
       }
     }
@@ -553,6 +1333,32 @@
               overflow: hidden;
               cursor: pointer;
             }
+          }
+          > button {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+          > button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+          .houtui {
+            position: absolute;
+            top: 12%;
+            left: 460px;
+          }
+          .qianjin {
+            position: absolute;
+            top: 12%;
+            left: 500px;
           }
         }
 
@@ -816,6 +1622,7 @@
 
               img {
                 width: 100%;
+                border-radius: 6px;
               }
             }
 
@@ -1255,6 +2062,7 @@
                 width: 12px;
                 height: 12px;
                 margin-right: 6px;
+                transition: all 0.5s ease;
               }
             }
 
@@ -1737,6 +2545,7 @@
                 width: 12px;
                 height: 12px;
                 margin-right: 6px;
+                transition: all 0.5s ease;
               }
             }
 
@@ -2129,12 +2938,36 @@
               }
             }
             .bangumHeaderLTime {
+              position: relative;
+              background: #f6f7f8;
+              height: 30px;
+              .btn-item {
+                position: relative;
+                z-index: 2;
+              }
+
               button {
                 padding: 6px 15px;
                 border-radius: 14px;
                 font-size: 14px;
                 color: inherit;
                 border: none;
+                background: transparent;
+              }
+              .button-active {
+                // background: #00aeec;
+                color: #fff;
+              }
+              .activebg {
+                position: absolute;
+                width: 100px;
+                height: 100%;
+                background: #00aeec;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                border-radius: 14px;
+                transition: all 0.15s linear;
               }
             }
           }
@@ -2170,7 +3003,7 @@
           justify-content: space-between;
           flex-wrap: wrap;
           height: 470px;
-          .cartoonLeftFooterF {
+          .bangumLeftFooterF {
             width: 268px;
             height: 225px;
             position: relative;
@@ -2194,7 +3027,7 @@
               }
             }
 
-            .cartoonTv {
+            .bangumTv {
               display: flex;
               padding: 16px 8px 6px;
               box-sizing: border-box;
@@ -2237,7 +3070,7 @@
               }
             }
 
-            .cartoonTvText {
+            .bangumTvText {
               width: 269px;
               height: 44px;
 
@@ -2337,6 +3170,7 @@
               width: 12px;
               height: 12px;
               margin-right: 6px;
+              transition: all 0.5s ease;
             }
           }
 
@@ -2528,6 +3362,7 @@
                 width: 12px;
                 height: 12px;
                 margin-right: 6px;
+                transition: all 0.5s ease;
               }
             }
 
@@ -2752,6 +3587,7 @@
                 width: 12px;
                 height: 12px;
                 margin-right: 6px;
+                transition: all 0.5s ease;
               }
             }
 
@@ -2808,6 +3644,9 @@
               .pictureRT {
                 h3 {
                   color: #18191c;
+                }
+                h3:hover {
+                  color: #00aeec;
                 }
               }
               p {
@@ -3300,5 +4139,52 @@
     li:nth-child(2n) {
       background-color: #f6f7f8;
     }
+  }
+}
+@keyframes dnpms {
+  0% {
+    opacity: 1;
+  }
+  1.5% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  4.5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  7.5% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16.5% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  19.5% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 1;
+  }
+  22.5% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

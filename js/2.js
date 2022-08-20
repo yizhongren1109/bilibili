@@ -1,149 +1,131 @@
-(function () {
-  const imgData = [
-    {
-      imgpath: "./imgs/1.webp",
-      id: 1,
-      title: "我带着数十万大奖，在这个夏天等你~",
-      color: "103, 137, 159",
-    },
-    {
-      imgpath: "./imgs/2.webp",
-      id: 2,
-      title: "为喜欢的动画配音吧！",
-      color: "107, 105, 113",
-    },
-    {
-      imgpath: "./imgs/3.webp",
-      id: 3,
-      title: "谁能拒绝脆皮烤五花呢ε==(づ′▽`)づ",
-      color: "177, 107, 58",
-    },
-    {
-      imgpath: "./imgs/4.webp",
-      id: 4,
-      title: "不好意思，这次一定要帅到你",
-      color: "73, 66, 64",
-    },
-    {
-      imgpath: "./imgs/5.webp",
-      id: 1,
-      title: "打卡中国动画100年，赢千元动画礼盒！",
-      color: "69, 89, 74",
-    },
-    {
-      imgpath: "./imgs/6.webp",
-      id: 6,
-      title: "要来玩一场数学的生命游戏吗？",
-      color: "23,15,11",
-    },
-    {
-      imgpath: "./imgs/7.webp",
-      id: 7,
-      title: "身 法 教 学",
-      color: "85, 52, 30",
-    },
-    {
-      imgpath: "./imgs/8.webp",
-      id: 8,
-      title: "芬达搞新口味   猴？果？猴面包果？",
-      color: "213, 69, 37",
-    },
-    {
-      imgpath: "./imgs/9.webp",
-      id: 9,
-      title: "《Fate/Zero》名场面放映十周年",
-      color: "58, 83, 112",
-    },
-    {
-      imgpath: "./imgs/1.webp",
-      id: 1,
-      title: "我带着数十万大奖，在这个夏天等你~",
-      color: "103, 137, 159",
-    },
-  ];
-  const container = document.querySelector(".container");
-  const imgBox = document.querySelector(".img-box");
-  const houtui = document.querySelector(".houtui");
-  const qianjin = document.querySelector(".qianjin");
-  const title = document.querySelector(".title");
-  const mengceng = document.querySelector(".mengceng");
-  const li = document.querySelectorAll(".box-footer li");
-  // 第几个
-  var step = 0;
+window.onload = () => {
+  const topCon = document.querySelector(".topCon");
+  const bgi = document.querySelector(".bgi");
+  const raindrop1 = document.querySelector(".raindrop1");
+  const raindrop2 = document.querySelector(".raindrop2");
+  const rwsp = document.querySelector(".person-video");
+  const rwyp = document.querySelector(".person-audio");
+  const sj = document.querySelector(".iphone");
+  const ys = document.querySelector(".rain-audio");
+  const bfzt = document.querySelector(".play-or-pause");
+  const myRange = document.querySelector(".my-range");
+  const nav = document.querySelector(".navigation");
+  const gb = document.querySelector(".close");
+  const playtv = document.querySelector(".play-tv");
+  const play = document.querySelector(".play");
+  const mengceng = document.querySelector(".mask");
 
-  title.innerText = imgData[step].title;
-  mengceng.style.background = `rgb(${imgData[step].color})`;
+  const setypsp = (spsrc, ypsrc) => {
+    rwsp.src = spsrc;
+    rwyp.src = ypsrc;
+    rwsp.play();
+    ypsrc == "" ? "" : rwyp.play();
+  };
 
-  imgData.forEach((item) => {
-    const str1 = `<img src="${item.imgpath}" />`;
-    imgBox.innerHTML += str1;
+  myRange.addEventListener("change", (e) => {
+    ys.volume = e.target.value;
   });
-  const next = () => {
-    if (step == imgData.length - 1) {
-      step = 0;
-      imgBox.style.transitionDuration = "0s";
-      imgBox.style.transform = "translateX(0px)";
-      let temp = imgBox.offsetWidth;
+
+  let suiji = 1,
+    sjShow = false,
+    iszhankai = false;
+
+  playtv.style.top = bgi.offsetHeight * 0.27 + "px";
+  play.style.top = bgi.offsetHeight * 0.12 + "px";
+  raindrop2.style.top = bgi.offsetHeight * 0.06 + "px";
+  topCon.addEventListener("click", (e) => {
+    iszhankai = true;
+    topCon.style.height = bgi.offsetHeight - 1 + "px";
+    topCon.style.marginTop = "0";
+    nav.style.visibility = "hidden";
+    const ab = setTimeout(() => {
+      gb.style.display = "block";
+    }, 400);
+  });
+  gb.addEventListener("click", (e) => {
+    if (sjShow) {
+      mengceng.click();
     }
-    step++;
-    imgBox.style.transitionDuration = "0.3s";
-    imgBox.style.transform = `translateX(${
-      -step * imgBox.offsetWidth + 1.5
-    }px)`;
-    fenyeqi();
-    changetitle();
-    changecolor();
-  };
-  // 后退
-  const pre = () => {
-    if (step == 0) {
-      step = imgData.length - 1;
-      imgBox.style.transitionDuration = "0s";
-      imgBox.style.transform = `translateX(${-step * imgBox.offsetWidth}px)`;
-      let temp = imgBox.offsetWidth;
-    }
-    step--;
-    imgBox.style.transitionDuration = "0.3s";
-    imgBox.style.transform = `translateX(${
-      -step * imgBox.offsetWidth - 1.5
-    }px)`;
-    fenyeqi();
-    changetitle();
-    changecolor();
-  };
-  // 自动播放
-  let autoPlay = setInterval(next, 2000);
+    iszhankai = false;
+    topCon.style.height = "196px";
+    topCon.style.marginTop = "-20px";
+    nav.style.visibility = "visible";
+    playtv.style.top = bgi.offsetHeight * 0.27 + "px";
+    play.style.top = bgi.offsetHeight * 0.12 + "px";
+    raindrop2.style.top = bgi.offsetHeight * 0.06 + "px";
+    gb.style.display = "none";
+    e.stopPropagation();
+  });
 
-  // 绑定前进
-  qianjin.addEventListener("click", () => {
-    next();
+  bfzt.addEventListener("click", () => {
+    if (ys.paused) {
+      ys.play();
+      bfzt.style.backgroundImage = "url(./imgs/animation/bofang.png)";
+    } else {
+      ys.pause();
+      bfzt.style.backgroundImage = "url(./imgs/animation/zanting.png)";
+    }
   });
-  // 绑定后退
-  houtui.addEventListener("click", () => {
-    pre();
+
+  const raindrop1time = setInterval(() => {
+    // 雨滴1播放
+    raindrop1.play();
+    // 延时雨滴2
+    const raindrop2time = setTimeout(() => {
+      // 雨滴2播放
+      raindrop2.play();
+    }, 1000);
+  }, 3800);
+
+  rwsp.addEventListener("ended", () => {
+    if (suiji == 10) {
+      suiji = 1;
+    }
+    console.log("视频播放结束");
+    if (!sjShow) {
+      if (suiji % 3 == 0) {
+        Math.random() > 0.5
+          ? setypsp(
+              "./imgs/animation/fanshu.webm",
+              "./imgs/animation/fanshu.mp3"
+            )
+          : setypsp(
+              "./imgs/animation/rouyan.webm",
+              "./imgs/animation/rouyan.mp3"
+            );
+      } else {
+        setypsp("./imgs/animation/kanshu.webm", "");
+      }
+      suiji++;
+    }
   });
-  // 鼠标移入暂停
-  container.addEventListener("mouseenter", () => {
-    clearInterval(autoPlay);
+  rwsp.addEventListener("click", () => {
+    if (!iszhankai) {
+      return;
+    }
+    setypsp(
+      "./imgs/animation/naqishouji.webm",
+      "./imgs/animation/naqishouji.mp3"
+    );
+    const ab = setTimeout(() => {
+      sj.style.top = "2%";
+    }, 800);
+    sjShow = true;
+    mengceng.style.display = "block";
   });
-  // 鼠标移出继续
-  container.addEventListener("mouseleave", () => {
-    autoPlay = setInterval(next, 2000);
+  mengceng.addEventListener("click", (e) => {
+    setypsp(
+      "./imgs/animation/fangxiashouji.webm",
+      "./imgs/animation/fangxiashouji.mp3"
+    );
+    const ab = setTimeout(() => {
+      sj.style.top = "100%";
+    }, 300);
+    sjShow = false;
+    mengceng.style.display = "none";
+    e.stopPropagation();
   });
-  // 改变分页器
-  const fenyeqi = function () {
-    let temp = step;
-    if (step == imgData.length - 1) temp = 0;
-    li.forEach((item, index) => {
-      item.className = index === temp ? "active" : "";
-    });
-  };
-  // 改变标题
-  const changetitle = function () {
-    title.innerText = imgData[step].title;
-  };
-  // 改变颜色
-  const changecolor = function () {
-    mengceng.style.background = `rgb(${imgData[step].color})`;
-  };
-})();
+  nav.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+};

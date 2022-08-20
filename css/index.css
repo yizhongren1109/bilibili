@@ -3,25 +3,32 @@
 }
 #app .topCon {
   width: 100%;
-  height: 155px;
-  background-image: url(../imgs/zhankaitupian.png), url(../imgs/boli.png);
-  transition: all 0.3s linear;
-  background-size: 100% 310px;
+  height: 196px;
+  margin-top: -20px;
+  transition: all 0.5s linear;
   position: relative;
   overflow: hidden;
 }
 #app .topCon .navigation {
+  width: 100%;
   height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: visible;
+  z-index: 99;
+  transition: all 0.2s linear;
 }
-#app .topCon .navigation .navigationLeft ul {
+#app .topCon .navigation .navigationLeft > ul {
   display: flex;
   font-size: 14px;
   align-items: center;
   height: 64px;
+  position: relative;
 }
 @keyframes run {
   0% {
@@ -34,29 +41,269 @@
     transform: translateY(0px);
   }
 }
-#app .topCon .navigation .navigationLeft ul li:not(.cancel):hover {
+#app .topCon .navigation .navigationLeft > ul > li:not(.cancel):hover {
   animation: run 0.4s;
 }
-#app .topCon .navigation .navigationLeft ul li {
+#app .topCon .navigation .navigationLeft > ul > li {
   height: 64px;
   cursor: pointer;
 }
-#app .topCon .navigation .navigationLeft ul li a {
+#app .topCon .navigation .navigationLeft > ul > li a {
   color: #fff;
   display: inline-block;
   height: 100%;
   line-height: 64px;
   margin: 0 15px 0 0;
+  transition: all 0.2s linear;
 }
-#app .topCon .navigation .navigationLeft ul li a svg {
+#app .topCon .navigation .navigationLeft > ul > li a svg {
   vertical-align: text-top;
 }
+#app .topCon .navigation .navigationLeft > ul .Satellite {
+  position: absolute;
+  top: 80%;
+  background-color: #fff;
+  display: flex;
+  border-radius: 8px;
+  width: 116%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  border: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft {
+  width: 100%;
+  padding: 20px 0 20px 20px;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft .SatelliteLeftF {
+  margin-bottom: 16px;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft .SatelliteLeftB {
+  height: 198px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border-right: 1px solid #e0e0e0;
+  padding-right: 10px;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft .SatelliteLeftB div {
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft .SatelliteLeftB div img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteLeft .SatelliteLeftB div p:hover {
+  color: #00aeec;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteRight {
+  padding: 20px;
+}
+#app .topCon .navigation .navigationLeft > ul .Satellite .SatelliteRight div img {
+  border-radius: 5px;
+  margin-top: 18px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  border-radius: 8px;
+  width: 86%;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft {
+  padding-right: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftH img {
+  width: 230px;
+  height: 129px;
+  border-radius: 6px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftF {
+  height: 108px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftF img {
+  width: 66px;
+  height: 66px;
+  border-radius: 15px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftF .gameCenterLeftFL div,
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftF .gameCenterLeftFC div,
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterLeft .gameCenterLeftF .gameCenterLeftFR div {
+  width: 66px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight {
+  padding: 0 20px;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight > ul {
+  position: relative;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight > ul li {
+  padding: 7px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #61666d;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight > ul li img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 100%;
+  border-radius: 6px;
+  display: none;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight > ul li:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationLeft > ul .gameCenter .gameCenterRight > ul li:hover img {
+  display: block;
+}
+#app .topCon .navigation .navigationLeft > ul .animator {
+  position: absolute;
+  height: 218px;
+  background-color: #fff;
+  width: 91%;
+  top: 80%;
+  left: 20%;
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  display: flex;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+  border: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorLeft {
+  display: flex;
+  flex-wrap: wrap;
+  width: 345px;
+  justify-content: space-between;
+  padding-right: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorLeft img {
+  width: 136px;
+  height: 77px;
+  border-radius: 6px;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorLeft p:hover {
+  color: #00aeec;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight {
+  margin-left: 20px;
+  width: 27%;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight h2 {
+  margin-bottom: 10px;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight ul {
+  position: relative;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight li {
+  color: #61666d;
+  padding: 6px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight li:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight li:hover img {
+  display: block;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight img {
+  position: absolute;
+  width: 165%;
+  display: none;
+  top: -15%;
+  left: 105%;
+  border-radius: 8px;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight .animatorRight1 {
+  color: #ff473d;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight .animatorRight2 {
+  color: #ff6a29;
+}
+#app .topCon .navigation .navigationLeft > ul .animator .animatorRight .animatorRight3 {
+  color: #ff9214;
+}
+#app .topCon .navigation .navigationLeft > ul .down {
+  position: absolute;
+  display: flex;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  top: 80%;
+  visibility: hidden;
+  opacity: 0;
+  left: 55%;
+  width: 60%;
+  height: 230%;
+  border-radius: 8px;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+}
+#app .topCon .navigation .navigationLeft > ul .down svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+#app .topCon .navigation .navigationLeft > ul .down .sub {
+  font-size: 12px;
+  color: #61666d;
+  margin: 5px 0;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downLeft {
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+  padding-right: 25px;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downLeft img {
+  width: 87px;
+  height: 87px;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downRight {
+  text-align: center;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downRight img {
+  width: 52px;
+  height: 52px;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downRight .download {
+  background-color: #00aeec;
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  margin: 5px 0 0 13px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationLeft > ul .down .downRight .download:hover {
+  background-color: rgba(0, 174, 236, 0.5);
+}
 #app .topCon .navigation .searchBar {
-  width: 438.2px;
+  width: 438px;
   height: 40px;
   background-color: #fff;
   z-index: 1;
-  border-radius: 6px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 #app .topCon .navigation .searchBar input {
   width: 377px;
@@ -64,22 +311,91 @@
   margin-top: 2px;
   border: none;
   font-size: 14px;
+  margin-right: 18px;
+  padding-left: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
 }
-#app .topCon .navigation .navigationRight ul {
+#app .topCon .navigation .searchBar input:focus ~ .searchBarFocus {
+  display: block;
+}
+#app .topCon .navigation .searchBar input:focus {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .searchBar .sousuo {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+#app .topCon .navigation .searchBar .sousuo svg {
+  width: 17px;
+  height: 17px;
+}
+#app .topCon .navigation .searchBar .searchBarFocus {
+  display: none;
+  padding: 15px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 530%;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  border-right: none;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .FocusHeader {
+  font-size: 16px;
+  color: #18191c;
+  padding-left: 16px;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .FocusFooter {
+  display: flex;
+  justify-content: space-between;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .focusItem {
+  cursor: pointer;
+  width: 213px;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 16px;
+  height: 38px;
+  align-items: center;
+  font-size: 14px;
+  color: #18191c;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .focusItem div:nth-child(1) {
+  margin-right: 7px;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .focusItem div:nth-child(2) {
+  margin-right: 6px;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .focusItem img {
+  width: 14px;
+  height: 14px;
+}
+#app .topCon .navigation .searchBar .searchBarFocus .focusItem:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul {
   display: flex;
   font-size: 13px;
   height: 50px;
   align-items: center;
+  position: relative;
 }
-#app .topCon .navigation .navigationRight ul li {
+#app .topCon .navigation .navigationRight > ul > li {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
-#app .topCon .navigation .navigationRight ul li a:not(.portrait):hover svg {
+#app .topCon .navigation .navigationRight > ul > li a:not(.portrait):hover svg {
   animation: run 0.4s;
 }
-#app .topCon .navigation .navigationRight ul li a {
+#app .topCon .navigation .navigationRight > ul > li a {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -89,32 +405,228 @@
   align-items: center;
   height: 100%;
 }
-#app .topCon .navigation .navigationRight ul li a img {
+#app .topCon .navigation .navigationRight > ul > li a img {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   border: 3px solid white;
 }
-#app .topCon .navigation .navigationRight ul li a:not(.portrait) {
+#app .topCon .navigation .navigationRight > ul > li a:not(.portrait) {
   padding-top: 7px;
 }
-#app .topCon .navigation .navigationRight li:nth-child(1) {
+#app .topCon .navigation .navigationRight > ul .photo {
   margin-right: 10px;
+  transition: all 0.3s linear;
+  z-index: 3;
 }
-#app .topCon .navigation .navigationRight li:nth-child(7) {
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover {
+  visibility: hidden;
+  opacity: 0;
+  width: 300px;
+  height: 381px;
+  top: 80%;
+  left: -31%;
+  z-index: -1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: #fff;
+  position: absolute;
+  padding-top: 40px;
+  text-align: center;
+  transition: all 0.3s linear;
+  border: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover1 {
+  font-size: 18px;
+  color: #18191c;
+  margin-bottom: 5px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover2 {
+  display: flex;
+  justify-content: center;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover2 div {
+  margin: 0 5px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 svg {
+  width: 10%;
+  height: 30px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .planup {
+  width: 75%;
+  height: 3px;
+  background-color: #c9ccd0;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .plan {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background-color: #f3cb85;
+  top: 44%;
+  left: 15%;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .exp {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: left;
+  position: absolute;
+  width: 65%;
+  left: 90%;
+  top: -200%;
+  opacity: 0;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  background-color: #fff;
+  padding: 20px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .exp .vip {
+  color: #00aeec;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .exp > div p {
+  margin-bottom: 12px;
+  margin-left: 20px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3 .exp .vipgrade {
+  margin-bottom: 5px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover3:hover .exp {
+  opacity: 1;
+  visibility: visible;
+  left: 100%;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover4 {
+  color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover5 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover5 .photoHover5Item div:first-child {
+  font-size: 18px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover6 {
+  display: flex;
+  padding: 0 20px;
+  height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  color: #61666d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover6 .photoHover6Item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover6 .photoHover6Item svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover6 > svg {
+  width: 10px;
+  height: 10px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover6:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover7 {
+  width: 90%;
+  height: 2px;
+  background-color: #e3e5e7;
+  margin: 12px 0 12px 12px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 {
+  display: flex;
+  padding: 0 20px;
+  height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  color: #61666d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 .photoHover6Item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 .photoHover6Item svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 > svg {
+  width: 10px;
+  height: 10px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 .letter {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  width: 30%;
+  opacity: 0;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  height: 40%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 .letter > div {
+  height: 38px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8 .letter > div:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8:hover .letter {
+  opacity: 1;
+  visibility: visible;
+  left: 90%;
+}
+#app .topCon .navigation .navigationRight > ul .photo > .photoHover .photoHover8:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .photo:hover .photoHover {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(7) {
   margin-right: 15px;
   width: 52px;
 }
-#app .topCon .navigation .navigationRight li:nth-child(8) {
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(8) {
   margin-right: 35px;
+  width: auto;
 }
-#app .topCon .navigation .navigationRight li:nth-child(8) a {
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(8) a {
   width: 100px;
 }
-#app .topCon .navigation .navigationRight li:nth-child(8) a div:hover {
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(8) a div:hover {
   background-color: #ffaec5;
 }
-#app .topCon .navigation .navigationRight li:nth-child(8) a div {
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(8) a div {
   width: 90px;
   height: 34px;
   background: #fb7299;
@@ -123,67 +635,319 @@
   margin: auto;
   transition: background-color 0.3s;
 }
-#app .topCon .navigation .navigationRight li:nth-child(8) a div svg {
+#app .topCon .navigation .navigationRight > ul li:nth-of-type(8) a div svg {
   vertical-align: middle;
 }
-#app .topCon .banner {
-  display: flex;
-  align-items: flex-end;
-  margin-left: 64px;
-  cursor: pointer;
+#app .topCon .navigation .navigationRight > ul .photo:hover a {
+  transform: translate(-30px, 20px);
+  transition: all 0.3s linear;
 }
-#app .topCon .banner a img {
-  width: 162px;
-  height: 78px;
+#app .topCon .navigation .navigationRight > ul .photo:hover img {
+  transform: scale(1.8);
+  transition: all 0.3s linear;
 }
-#app .topCon .shut {
-  width: 36px;
-  height: 36px;
-  background-color: rgba(204, 204, 204, 0.5);
-  box-sizing: border-box;
-  padding-top: 5px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 4px;
+#app .topCon .navigation .navigationRight > ul .bigVip {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  display: none;
+  width: 47%;
+  height: 380%;
+  top: 80%;
+  left: -12%;
+  opacity: 0;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  padding: 16px 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
 }
-#app .topCon .shut img {
+#app .topCon .navigation .navigationRight > ul .bigVip .bigVip1 {
+  margin-bottom: 12px;
+}
+#app .topCon .navigation .navigationRight > ul .bigVip .bigVip2 p {
+  margin-top: 6px;
+}
+#app .topCon .navigation .navigationRight > ul .bigVip .bigVip2 p:hover {
+  color: #00aeec;
+}
+#app .topCon .navigation .navigationRight > ul .bigVip button {
+  width: 158px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #00b5e5;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+#app .topCon .navigation .navigationRight > ul .bigVip img {
+  width: 239px;
+  height: 70px;
+  border-radius: 6px;
+}
+#app .topCon .navigation .navigationRight > ul .news {
+  position: absolute;
+  width: 23%;
+  height: 370%;
+  top: 80%;
+  left: 15%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+  padding: 10px 0px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+#app .topCon .navigation .navigationRight > ul .news div {
+  padding: 10px 0 10px 27px;
+  font-size: 14px;
+  color: #61666d;
+}
+#app .topCon .navigation .navigationRight > ul .news div:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .contribute {
+  display: flex;
+  width: 61%;
+  height: 110%;
+  top: 80%;
+  left: 29%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+  padding: 10px 5px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  position: absolute;
+}
+#app .topCon .navigation .navigationRight > ul .contribute > div {
+  width: 62px;
+  height: 62px;
+  text-align: center;
+  border-radius: 5px;
+}
+#app .topCon .navigation .navigationRight > ul .contribute div:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .contribute svg {
   width: 24px;
   height: 24px;
 }
-#app .topCon .figure {
+#app .topCon .navigation .navigationRight > ul .ram {
   position: absolute;
-  left: 27%;
-  top: 0%;
-  z-index: 0;
+  width: 72%;
+  height: 500%;
+  top: 80%;
+  left: 0%;
+  background-color: #fff;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
   cursor: pointer;
 }
-#app .topCon .figure video {
-  height: 310px;
-  display: block;
+#app .topCon .navigation .navigationRight > ul .ram ul {
+  display: flex;
 }
-#app .topCon .Game {
-  position: absolute;
-  top: 49px;
-  right: 240px;
+#app .topCon .navigation .navigationRight > ul .ram ul li {
+  padding: 15px 0;
+  width: 124px;
+  text-align: center;
+  font-weight: bold;
+}
+#app .topCon .navigation .navigationRight > ul .ram ul .active {
+  color: #00aeec;
+  border-bottom: 2px solid #00aeec;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem {
+  display: none;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItem1 {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramH {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramH::before {
+  content: "";
+  width: 35%;
+  display: block;
+  height: 1px;
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramH::after {
+  content: "";
+  width: 35%;
+  display: block;
+  height: 1px;
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory {
+  display: flex;
+  padding: 0 20px;
   cursor: pointer;
 }
-#app .topCon .Game video {
-  height: 222px;
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory div:first-child img {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory div:last-child img {
+  width: 82px;
+  height: 46px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory .ramItemhistory1 {
+  width: 226px;
+  padding: 0 10px;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory .ramItemhistory1 p:first-child {
+  color: #61666d;
+}
+#app .topCon .navigation .navigationRight > ul .ram .ramItem .ramItemhistory:hover {
+  background-color: #e3e5e7;
+}
+#app .topCon .navigation .navigationRight > ul .ram .active {
   display: block;
 }
-#app .topCon .Games {
+#app .topCon .bgi {
+  width: 100%;
+  display: block;
+}
+#app .topCon .image {
+  width: 100%;
   position: absolute;
-  top: 83px;
-  right: 142px;
-  cursor: pointer;
-}
-#app .topCon .Games video {
-  height: 38px;
+  top: 0;
+  left: 0;
   display: block;
+}
+#app .topCon audio {
+  display: none;
+}
+#app .topCon .rain-bg {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#app .topCon .video {
+  position: absolute;
+  height: auto;
+  display: block;
+}
+#app .topCon .raindrop1 {
+  width: 3.8%;
+  left: 0;
+  top: 0;
+}
+#app .topCon .raindrop2 {
+  width: 3%;
+  left: 8.5%;
+  top: 2%;
+}
+#app .topCon .play {
+  top: 12%;
+  width: 10.7%;
+  right: 16%;
+}
+#app .topCon .play-tv {
+  width: 4.7%;
+  right: 9.4%;
+  top: 27%;
+}
+#app .topCon .watch-tv {
+  animation: dnpms 5s linear infinite;
+}
+#app .topCon .person-video {
+  width: 27%;
+  top: 0;
+  left: 29.3%;
+}
+#app .topCon .iphone {
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  width: 20%;
+  transition: all 0.3s linear;
+}
+#app .topCon .iphone img {
+  width: 100%;
+}
+#app .topCon .iphone .play-or-pause {
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  width: 12%;
+  height: 12%;
+  cursor: pointer;
+  background: url(imgs/animation/zanting.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#app .topCon .iphone .my-range {
+  -webkit-appearance: none;
+  background: transparent;
+  position: absolute;
+  width: 36%;
+  top: 82%;
+  left: 32%;
+  margin: 0;
+}
+#app .topCon .iphone .my-range:focus {
+  outline: none;
+}
+#app .topCon .iphone .my-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #004a87;
+  border-radius: 4px;
+}
+#app .topCon .iphone .my-range::-webkit-slider-thumb {
+  border: 4px solid #ffffff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #004a87;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+#app .topCon .iphone .my-range:focus::-webkit-slider-runnable-track {
+  background: #004a87;
+}
+#app .topCon .close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  display: none;
+}
+#app .topCon .close img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+}
+#app .topCon .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
 }
 #app .mainCenter {
   height: 5100px;
@@ -455,6 +1219,32 @@
   overflow: hidden;
   cursor: pointer;
 }
+#app .mainCenter .main .container .box-footer > button {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#app .mainCenter .main .container .box-footer > button svg {
+  width: 12px;
+  height: 12px;
+}
+#app .mainCenter .main .container .box-footer > button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#app .mainCenter .main .container .box-footer .houtui {
+  position: absolute;
+  top: 12%;
+  left: 460px;
+}
+#app .mainCenter .main .container .box-footer .qianjin {
+  position: absolute;
+  top: 12%;
+  left: 500px;
+}
 #app .mainCenter .main .container .mengceng {
   width: 100%;
   height: 100%;
@@ -666,6 +1456,7 @@
 }
 #app .mainCenter .delegators .delegatorsBottom .delegatorsImg a #imgStatic img {
   width: 100%;
+  border-radius: 6px;
 }
 #app .mainCenter .delegators .delegatorsBottom .delegatorsImg a .introducting {
   width: 269px;
@@ -1009,6 +1800,7 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  transition: all 0.5s ease;
 }
 #app .mainCenter .broadcast .broadcastLeft .broadcastHeader .broadcastHeaderR > button:hover {
   background-color: #e3e5e7;
@@ -1373,6 +2165,7 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  transition: all 0.5s ease;
 }
 #app .mainCenter .cartoon .cartoonLeft .cartoonLeftHerder .cartoonLeftHerderR > button:hover {
   background-color: #e3e5e7;
@@ -1729,12 +2522,36 @@
   font-size: 24px;
   color: #18191c;
 }
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime {
+  position: relative;
+  background: #f6f7f8;
+  height: 30px;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime .btn-item {
+  position: relative;
+  z-index: 2;
+}
 #app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime button {
   padding: 6px 15px;
   border-radius: 14px;
   font-size: 14px;
   color: inherit;
   border: none;
+  background: transparent;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime .button-active {
+  color: #fff;
+}
+#app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderL .bangumHeaderLTime .activebg {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: #00aeec;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 14px;
+  transition: all 0.15s linear;
 }
 #app .mainCenter .bangum .bangumLeft .bangumHeader .bangumHeaderR {
   font-size: 13px;
@@ -1766,16 +2583,16 @@
   flex-wrap: wrap;
   height: 470px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF {
   width: 268px;
   height: 225px;
   position: relative;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF a {
   display: block;
   height: 68%;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a #img5 {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF a #img5 {
   width: 268px;
   height: 151px;
   position: absolute;
@@ -1785,10 +2602,10 @@
   border-radius: 6px;
   overflow: hidden;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF a #img5 img {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF a #img5 img {
   width: 100%;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTv {
   display: flex;
   padding: 16px 8px 6px;
   box-sizing: border-box;
@@ -1804,63 +2621,63 @@
   align-items: center;
   justify-content: space-between;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTv > div {
   height: 100%;
   box-sizing: border-box;
   color: #fff;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div > span {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTv > div > span {
   margin-right: 12px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > div > span svg {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTv > div > span svg {
   width: 18px;
   height: 18px;
   vertical-align: middle;
   color: #fff;
   margin-right: 4px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTv > span {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTv > span {
   color: #fff;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText {
   width: 269px;
   height: 44px;
   margin-top: 10px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText h3 {
   font-size: 15px;
   font-weight: 600;
   margin-right: 16px;
   height: 28px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 a {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText h3 a {
   color: #18191c;
   transition: color 0.2s linear;
   cursor: pointer;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText h3 a:hover {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText h3 a:hover {
   color: #00aeec;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText > div {
   display: flex;
   margin-top: 4px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText > div a {
   display: flex;
   color: #9499a0;
   transition: color 0.2s linear;
   cursor: pointer;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a svg {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText > div a svg {
   width: 16px;
   height: 16px;
   margin-right: 2px;
   fill: #9499a0;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a span:nth-child(3) {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText > div a span:nth-child(3) {
   margin-left: 4px;
 }
-#app .mainCenter .bangum .bangumLeft .bangumFooter .cartoonLeftFooterF .cartoonTvText > div a:hover {
+#app .mainCenter .bangum .bangumLeft .bangumFooter .bangumLeftFooterF .bangumTvText > div a:hover {
   color: #00aeec;
 }
 #app .mainCenter .bangum .bangumRight {
@@ -1904,6 +2721,7 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  transition: all 0.5s ease;
 }
 #app .mainCenter .Dynamic .DynamicHeader .DynamicHeaderR > button:hover {
   background-color: #e3e5e7;
@@ -2069,6 +2887,7 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  transition: all 0.5s ease;
 }
 #app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR > button:hover {
   background-color: #e3e5e7;
@@ -2268,6 +3087,7 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  transition: all 0.5s ease;
 }
 #app .mainCenter .Feature .FeatureLeft .FeatureHeader .FeatureHeaderR > button:hover {
   background-color: #e3e5e7;
@@ -2317,6 +3137,9 @@
 }
 #app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR .pictureRT h3 {
   color: #18191c;
+}
+#app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR .pictureRT h3:hover {
+  color: #00aeec;
 }
 #app .mainCenter .Feature .FeatureLeft .FeatureFooter .FeatureFooterItem .pictureR p {
   margin-top: 8px;
@@ -2746,4 +3569,51 @@
 }
 .cartoonRightBottom ul li:nth-child(2n) {
   background-color: #f6f7f8;
+}
+@keyframes dnpms {
+  0% {
+    opacity: 1;
+  }
+  1.5% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  4.5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  7.5% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16.5% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  19.5% {
+    opacity: 0;
+  }
+  21% {
+    opacity: 1;
+  }
+  22.5% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }

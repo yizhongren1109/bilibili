@@ -1,270 +1,19 @@
+import {
+  videoData,
+  barrage,
+  sinatvData,
+  cartoonData,
+  FeatureData,
+  bangumData,
+  bangumstateData,
+} from "./const.js";
+
 //顶部动画
-
 (function () {
-  let topCon = document.querySelector(".topCon"),
-    banner = topCon.querySelector(".banner"),
-    navigation = topCon.querySelector(".navigation"),
-    img = banner.querySelector("a"),
-    div = topCon.querySelector(".shut");
-  banner.addEventListener("click", function () {
-    topCon.style.height = "310px";
-    navigation.style.display = "none";
-    img.style.display = "none";
-    div.style.display = "block";
-  });
-  /*   figure.addEventListener("click", function () {
-        topCon.style.height = "310px";
-        navigation.style.display = "none";
-        img.style.display = "none";
-        div.style.display = "block";
-      });
-      Game.addEventListener("click", function () {
-        topCon.style.height = "310px";
-        navigation.style.display = "none";
-        img.style.display = "none";
-        div.style.display = "block";
-      }); */
-
-  div.addEventListener("click", function () {
-    topCon.style.height = "155px";
-    navigation.style.display = "flex";
-    img.style.display = "block";
-    div.style.display = "none";
-  });
-
-  //视频数据
-  const videoData = [
-    {
-      src: "https://www.bilibili.com/video/BV1cG411W7hE?spm_id_from=333.851.b_7265636f6d6d656e64.3",
-      imgsrc: "../imgs/书单分享  想要提升文笔 来看看这30本书！.jpg",
-      videosrc:
-        "../imgs/书单分享  想要提升文笔 来看看这30本书！ - 1.书单分享  想要提升文笔 来看看这30本书！(Av259044845,P1).mp4",
-      num: "2.3万",
-      vnum: 9,
-      time: "00:17",
-      title: "书单分享 想要提升文笔 来看看这30本书！",
-      namesrc: "https://space.bilibili.com/493318926?spm_id_from=333.337.0.0",
-      name: "他整天在徘徊",
-      data: "· 8-1",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1xN4y1L7K7?spm_id_from=333.851.b_7265636f6d6d656e64.5",
-      imgsrc: "../imgs/【笑笑】小城夏天♥心动像风来得不知不觉~.jpg",
-      videosrc:
-        "../imgs/【笑笑】小城夏天♥心动像风来得不知不觉~ - 1.【笑笑】小城夏天♥心动像风来得不知不觉~(Av898988578,P1).mp4",
-      num: "17.5万",
-      vnum: 180,
-      time: "01：30",
-      title: "【笑笑】小城夏天♥心动像风来得不知不觉~",
-      namesrc:
-        "https://i0.hdslb.com/bfs/archive/196216ca4e1958c66c8c58de9acb68581cd78de8.jpg@672w_378h_1c.webp",
-      name: "笑笑呀w",
-      data: "· 7-31",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1cG411W7hE?spm_id_from=333.851.b_7265636f6d6d656e64.3",
-      imgsrc: "../imgs/HTML+CSS 逼真的云彩视差Banner.jpg",
-      videosrc:
-        "../imgs/HTML+CSS 逼真的云彩视差Banner - 1.1658113062450.mp4(Av428576641,P1).mp4",
-      num: "3522",
-      vnum: 0,
-      time: "05：02",
-      title: "HTML+CSS 逼真的云彩视差Banner",
-      namesrc:
-        "https://space.bilibili.com/435041694?spm_id_from=333.851.b_7265636f6d6d656e64.3",
-      name: "时克的前端",
-      data: "· 07-18",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1VF411P7cd?spm_id_from=333.851.b_7265636f6d6d656e64.1",
-      imgsrc:
-        "../imgs/【单依纯 空耳】《空耳》里的远方是比相隔银河还远的距离。.jpg",
-      videosrc:
-        "../imgs/【单依纯 空耳】《空耳》里的远方是比相隔银河还远的距离。 - 1.【单依纯 空耳】《空耳》里的远方是比相隔银河还远的距离。(Av301719615,P1).mp4",
-      num: "5.5万",
-      vnum: 406,
-      time: "04：18",
-      title: "【单依纯 空耳】《空耳》里的远方是比相隔银河还远的距离。",
-      namesrc:
-        "https://space.bilibili.com/20713882?spm_id_from=333.851.b_7265636f6d6d656e64.1",
-      name: "单依纯",
-      data: "· 8-5",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1j3411F7np?spm_id_from=333.851.b_7265636f6d6d656e64.4",
-      imgsrc:
-        "../imgs/我们相遇在夏天～♥夏日晴海♥相伴在未来的每一天！【楚鸢】.jpg",
-      videosrc:
-        "../imgs/我们相遇在夏天～♥夏日晴海♥相伴在未来的每一天！【楚鸢】 - 1.我们相遇在夏天～♥夏日晴海♥相伴在未来的每一天！【楚鸢】(Av513479509,P1).mp4",
-      num: "33.3万",
-      vnum: 9,
-      time: "01：23",
-      title: "我们相遇在夏天～♥夏日晴海♥相伴在未来的每一天！【楚鸢",
-      namesrc: "https://space.bilibili.com/97094885",
-      name: "楚鸢鸢吖",
-      data: "· 07-15",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1Da411n7Sq?spm_id_from=333.851.b_7265636f6d6d656e64.6",
-      imgsrc: "../imgs/你好，我想应聘你的夏日女友.jpg",
-      videosrc:
-        "../imgs/你好，我想应聘你的夏日女友 - 1.你好，我想应聘你的夏日女友(Av215903011,P1).mp4",
-      num: "21.3万",
-      vnum: 318,
-      time: "01:34",
-      title: "你好，我想应聘你的夏日女友",
-      namesrc:
-        "https://space.bilibili.com/837470?spm_id_from=333.851.b_7265636f6d6d656e64.6",
-      name: "桃核叫我桃道长",
-      data: "· 7-15",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1P94y1Q75L?spm_id_from=333.851.b_7265636f6d6d656e64.2",
-      imgsrc: "../imgs/这个夏天❤不 能 没 有 水 着❤.jpg",
-      videosrc:
-        "../imgs/这个夏天❤不 能 没 有 水 着❤ - 1.这个夏天❤不 能 没 有 水 着❤(Av343429856,P1).mp4",
-      num: "22.3万",
-      vnum: 369,
-      time: "01:22",
-      title: "小城夏天的元气少女",
-      namesrc:
-        "https://space.bilibili.com/837470?spm_id_from=333.851.b_7265636f6d6d656e64.6",
-      name: "一只大王哀",
-      data: "· 7-15",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1G94y1X7xr?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f",
-      imgsrc:
-        "../imgs/如水般柔软灵动的江南姑娘～在水乡跳一曲《小城夏天》！.jpg",
-      videosrc:
-        "../imgs/如水般柔软灵动的江南姑娘～在水乡跳一曲《小城夏天》！ - 1.如水般柔软灵动的江南姑娘～在水乡跳一曲《小城夏天》！(Av343656641,P1).mp4",
-      num: "24.1万",
-      vnum: 254,
-      time: "01:27",
-      title: "如水般柔软灵动的江南姑娘～在水乡跳一曲《小城夏天》！",
-      namesrc:
-        "https://space.bilibili.com/848008?spm_id_from=333.851.b_7265636f6d6d656e64.2",
-      name: "-MyMy麦麦-",
-      data: "· 7-15",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV16r4y1j7n4?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f",
-      imgsrc: "../imgs/放假了！宿舍跳一下小城夏天.jpg",
-      videosrc:
-        "../imgs/放假了！宿舍跳一下小城夏天 - 1.放假了！宿舍跳一下小城夏天(Av771021221,P1).mp4",
-      num: "24.1万",
-      vnum: 254,
-      time: "01:27",
-      title: "放假了！宿舍跳一下小城夏天",
-      namesrc:
-        "https://space.bilibili.com/8366990?spm_id_from=333.851.b_7265636f6d6d656e64.2",
-      name: "--欣小萌--",
-      data: "· 7-17",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1jg411Z73E?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f",
-      imgsrc: "../imgs/暑假作业：我的邻家妹妹~超元气翻跳【小城夏天】.jpg",
-      videosrc:
-        "../imgs/暑假作业：我的邻家妹妹~超元气翻跳【小城夏天】 - 1.小城夏天(Av513615339,P1).mp4",
-      num: "43.1万",
-      vnum: 386,
-      time: "01:20",
-      title: "暑假作业：我的邻家妹妹~超元气翻跳【小城夏天】",
-      namesrc:
-        "https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.1",
-      name: "晓丹小仙女儿",
-      data: "· 7-17",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1jU4y1q7hT?spm_id_from=333.851.b_7265636f6d6d656e64.3",
-      imgsrc:
-        "../imgs/武汉的 小城夏天🔥 ，让你清凉一下！心动两下！【夜喵】.jpg",
-      videosrc:
-        "../imgs/武汉的 小城夏天🔥 ，让你清凉一下！心动两下！【夜喵】 - 1.武汉的 小城夏天🔥 ，让你清凉一下！心动两下！【夜喵】(Av686292184,P1).mp4",
-      num: "48.9万",
-      vnum: 386,
-      time: "01:20",
-      title: "武汉的 小城夏天🔥 ，让你清凉一下！心动两下！【夜喵】",
-      namesrc:
-        "https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.1",
-      name: "夜喵w",
-      data: "· 7-16",
-    },
-    {
-      src: "https://www.bilibili.com/video/BV1jU4y1q7hT?spm_id_from=333.851.b_7265636f6d6d656e64.3",
-      imgsrc: "../imgs/有初恋的夏天【小城夏天】.jpg",
-      videosrc:
-        "../imgs/有初恋的夏天【小城夏天】 - 1.有初恋的夏天【小城夏天】(Av471310247,P1).mp4",
-      num: "12.7万",
-      vnum: 354,
-      time: "01:20",
-      title: "有初恋的夏天【小城夏天】",
-      namesrc:
-        "https://space.bilibili.com/5142241?spm_id_from=333.851.b_7265636f6d6d656e64.1",
-      name: "绫濑双双",
-      data: "· 7-25",
-    },
-  ];
-  //弹幕数据
-  const barrage = [
-    "地板都变形了",
-    "王晓佳：对对对",
-    "今日无事，勾栏听曲",
-    "光看这个人，这个景就甜",
-    "好像“叶青”",
-    "这 背景在动 是认真的吗.",
-    "我全都要!!!",
-    "大哥，哪个工地",
-    "动作挺有力量",
-    "有一个瞬间眉眼像极了13年前的田中千绘",
-    "土木是认真的吗？",
-    "我也看到桥弯曲了哈哈哈",
-    "死去的回忆突然攻击我！",
-    "下次安全帽带起，反光背心穿起",
-    "我要当项目经理",
-    "101设计院等你",
-    "诡计多端的土木hr",
-    "美女无论什么发都好看哈哈哈哈哈",
-    "我相信大哥会越跳越好的",
-    "地面也跟着跳？？？",
-    "又想骗我去工地搬砖",
-    "我姚思洋直接闷了",
-    "好好一个女孩叫大哥",
-    "啊啊啊～美丽可爱的up，求同款裙子链接",
-    "这是看过跳的最像的",
-    "还是练过舞蹈在来比较好",
-    "严禁穿拖鞋、高跟鞋进入施工现场",
-    "我魏家文行不更名坐不改姓",
-    "讲真的，我在工地那么多年，没见过这么好看的",
-    "青涩的可爱！喜欢",
-    "卧槽，无情，我都连看三遍了",
-    "三分钟之内，我要这个甜妹的全部资料，谢谢",
-    "专业不决定事业",
-    "你们的老婆都好漂亮啊",
-    "姐姐贴贴",
-    "这明明不是大哥啊",
-    "转身动作是错的。。。",
-    "后面的背景真好看",
-    "新老婆+1",
-    "这里是哪里",
-    "哎呦不错哦",
-    "有几个角度好像宣美啊",
-    "今日无事，勾栏听曲",
-    "我金博涵行不更名坐不改姓",
-    "搬个砖我看看",
-    "还是王心凌跳得好",
-    "啊啊，求同款裙子呀",
-    "人好看卷直都一样",
-    "卧槽，这个up主好漂亮",
-    "工地防晒做的不错",
-    "爱了 爱了 呜呜呜呜",
-    "真的好白啊啊啊啊啊啊啊啊",
-  ];
-
   //绑定移入移出事件===========================================
   const addMouseEnter = function addMouseEnter() {
     let imgh = document.querySelectorAll(".first>a");
-    console.log(imgh);
+
     imgh.forEach((item) => {
       let video = item.querySelector("video"),
         imgo = item.querySelector("img"),
@@ -291,7 +40,7 @@
     // 每页多少数据
     pageSize = 6;
   const render = function render() {
-/*     let str = "";
+    /*     let str = "";
      videoData.forEach((item, index) => {
       // (page - 1) * pageSize <= index && index < page * pageSize
       // 第一页0-5
@@ -367,8 +116,7 @@
       }
     });  */
 
-
-    const strhtml = videoData.reduce((prev,cur,index)=>{
+    const strhtml = videoData.reduce((prev, cur, index) => {
       const {
         src,
         imgsrc,
@@ -438,8 +186,8 @@
         </div>
       </div>`;
       }
-      return prev
-    },"")
+      return prev;
+    }, "");
     VIDEO_MENU.innerHTML = strhtml;
   };
 
@@ -465,7 +213,8 @@
   //弹幕js=========================================================
 
   function renderBarrage() {
-    let danmubox = document.querySelectorAll(".first>a");
+    let danmubox = document.querySelectorAll(".first>a"),
+      aaa = null;
     //弹幕
     // 随机颜色
     function setColor() {
@@ -515,9 +264,13 @@
   }
 
   //推广区域移入移出事件====================================
-  const adddelegators = function adddelegators(imghClassName=".delegatorsB>a",opacity=0.2,transitionClassName=".transition") {
+  const adddelegators = function adddelegators(
+    imghClassName = ".delegatorsB>a",
+    opacity = 0.2,
+    transitionClassName = ".transition"
+  ) {
     let imgh = document.querySelectorAll(imghClassName);
-    console.log(imgh);
+
     imgh.forEach((item) => {
       let video = item.querySelector("video"),
         imgo = item.querySelector("img"),
@@ -538,45 +291,122 @@
   };
   adddelegators();
 
-  //赛事区域移入移出事件==========================================
-/*   const Competition = function Competition() {
-    let imgh = document.querySelectorAll(".CompetitionBottomF>a");
-    imgh.forEach((item) => {
-      let video = item.querySelector("video"),
-        imgo = item.querySelector("img"),
-        sinatv = item.parentNode.querySelector(".sinatv");
-      item.onmouseenter = function () {
-        video.play();
-        video.style.opacity = 1;
-        imgo.style.opacity = 0;
-        sinatv.style.opacity = 0;
-      };
-      item.onmouseleave = function () {
-        video.pause();
-        imgo.style.opacity = 1;
-        video.style.opacity = 0.2;
-        sinatv.style.opacity = 1;
-      };
+  //直播页面换一换效果=======================================================
+  let paper = 1,
+    paperitems = 8;
+  let broadcastFooter = document.querySelector(".broadcastFooter");
+  let btn2 = document.querySelector(".broadcastHeaderR>button");
+  let svg2 = btn2.querySelector("svg");
+
+  const sinatvRender = function sinatvRender() {
+    let str = ``;
+    sinatvData.forEach((item, index) => {
+      const { src, imgsrc, videosrc, num, vnum, time, namesrc, title, name } =
+        item;
+      if ((paper - 1) * paperitems <= index && index < paper * paperitems) {
+        str += `              <div class="broadcastFooterF">
+          <a
+            href="${src}"
+            target="_blank"
+          >
+            <div id="img4">
+              <img
+                src="${imgsrc}"
+                alt=""
+              />
+            </div>
+    
+            <video
+              src="${videosrc}"
+              muted
+            ></video>
+          </a>
+    
+          <div class="broadcastFootertv">
+            <div>
+              <span>
+                <svg class="bili-video-card__stats--icon">
+                  <use xlink:href="#widget-video-play-count"></use>
+                </svg>
+                <span>${num}</span>
+              </span>
+              <span>
+                <svg class="bili-video-card__stats--icon">
+                  <use xlink:href="#widget-video-danmaku"></use>
+                </svg>
+                <span>${vnum}</span>
+              </span>
+            </div>
+            <span>${time}</span>
+          </div>
+          <div class="broadcastFootertvtext">
+            <h3>
+              <a
+                href="${src}"
+              >
+                <div>
+                  <img src="./imgs/live.gif" alt="" />
+                  <span>直播中</span>
+                </div>
+                <span>${title}</span>
+              </a>
+            </h3>
+            <div>
+              <a
+                href="${namesrc}"
+              >
+                <svg class="bili-video-card__info--owner__up">
+                  <use xlink:href="#widget-up"></use>
+                </svg>
+                <span>${name}</span>
+              </a>
+            </div>
+          </div>
+        </div>`;
+      }
     });
-  }; */
-  adddelegators(".CompetitionBottomF>a",0.2,".sinatv");
+    broadcastFooter.innerHTML = str;
+  };
+  sinatvRender();
+  btn2.onclick = function () {
+    svg2.style.transform == "rotate(360deg)"
+      ? (svg2.style.transform = "rotate(0deg)")
+      : (svg2.style.transform = "rotate(360deg)");
+    paper++;
+
+    if (paper > sinatvData.length / paperitems) {
+      paper = 1;
+    }
+
+    sinatvRender();
+    adddelegators(".broadcastFooterF>a", 0.2, ".broadcastFootertv");
+  };
+  //赛事区域移入移出事件==========================================
+
+  adddelegators(".CompetitionBottomF>a", 0.2, ".sinatv");
+  //直播左移入移出事件==========================================
+
+  adddelegators(".broadcastFooterF>a", 0.2, ".broadcastFootertv");
 
   //直播右侧选项卡切换=================================================================================================
-  const cut = function cut() {
-    let ul = document.querySelector(".broadcastRight>ul");
+  const cut = function cut(
+    ulclassName = ".broadcastRight>ul",
+    itemclassName = ".item",
+    idName = "data-index",
+    aclassName = "active"
+  ) {
+    let ul = document.querySelector(ulclassName);
     let li = ul.querySelectorAll("li");
-    let item = document.querySelectorAll(".item");
+    let item = document.querySelectorAll(itemclassName);
     ul.addEventListener("click", (e) => {
-      
       if (e.target.tagName == "LI") {
-        let type = e.target.getAttribute("data-index");
-        
-        console.log(item[type]);
+        let type = e.target.getAttribute(idName);
+
         item.forEach((item, index) => {
-          const key = index==type?"add":"remove"
-          item.classList[key]("active");
-          li[index].classList[key]("active");
-/*           if (index == type) {
+          const key = index == type ? "add" : "remove";
+          item.classList[key](aclassName);
+          li[index].classList[key](aclassName);
+          /*           if (index == type) {
 
           } else {
             item.classList.remove("active");
@@ -587,14 +417,14 @@
     });
   };
   cut();
+  //漫画右侧选项卡切换=======================================
+  cut(".ComicRight>ul", ".items", "data-id", "arise");
 
   //排行榜移入移出效果=========================================================================================================
   const appear = document.querySelectorAll(".Ranking>li");
-  console.log(appear);
+
   appear.forEach((item) => {
     item.addEventListener("mouseenter", (e) => {
-      console.log(e.target.children[0]);
-      console.log(e.target.offsetHeight);
       // e.target.children[0].style.display = "block";
       e.target.children[0].style.opacity = 1;
       e.target.children[0].style.bottom = e.target.offsetHeight + 5 + "px";
@@ -602,7 +432,6 @@
       e.target.children[0].style.visibility = "visible";
     });
     item.addEventListener("mouseleave", (e) => {
-      console.log(e.target.children[0]);
       e.target.children[0].style.bottom = e.target.offsetHeight + "px";
 
       e.target.children[0].style.visibility = "hidden";
@@ -611,4 +440,418 @@
     });
   });
 
+  //导航栏直播过渡==============================================
+  const navtrans = function navtrans(
+    sintvH = ".Satellite",
+    sintv = ".Satellitetv"
+  ) {
+    let Satellite = document.querySelector(sintvH),
+      Satellitetv = document.querySelector(sintv);
+
+    Satellitetv.addEventListener("mouseenter", function () {
+      Satellite.style.visibility = "visible";
+      Satellite.style.opacity = 1;
+      Satellite.style.top = "100%";
+      Satellite.addEventListener("mouseenter", function () {
+        Satellite.style.visibility = "visible";
+        Satellite.style.opacity = 1;
+        Satellite.style.top = "100%";
+      });
+    });
+    Satellitetv.addEventListener("mouseleave", function () {
+      Satellite.style.visibility = "hidden";
+      Satellite.style.opacity = 0;
+      Satellite.style.top = "80%";
+      Satellite.addEventListener("mouseleave", function () {
+        Satellite.style.visibility = "hidden";
+        Satellite.style.opacity = 0;
+        Satellite.style.top = "80%";
+      });
+    });
+  };
+  navtrans();
+  //导航栏游戏中心过渡=================================================================
+  navtrans(".gameCenter", ".gameCentertv");
+  //导航栏漫画过渡================================================
+  navtrans(".animator", ".animatortv");
+
+  //导航栏下载过渡=====================================================
+  navtrans(".down", ".cancels");
+  //导航栏大会员过渡========================================
+  navtrans(".bigVip", ".bigViptv");
+  //导航栏消息过渡============================================
+  navtrans(".news", ".newstv");
+  //导航栏投稿过渡==========================================
+  navtrans(".contribute", ".contributetv");
+  //动画页面换一换效果
+  let cartoonLeftFooter = document.querySelector(".cartoonLeftFooter");
+  let btn3 = document.querySelector(".cartoonLeftHerderR>button");
+  let svg3 = btn3.querySelector("svg");
+  let cartpaper = 1;
+  let cartitems = 8;
+  const cartoonrender = function cartoonrender() {
+    let str = ``;
+    cartoonData.forEach((item, index) => {
+      const {
+        src,
+        imgsrc,
+        videosrc,
+        num,
+        vnum,
+        time,
+        namesrc,
+        title,
+        name,
+        data,
+      } = item;
+      if (
+        (cartpaper - 1) * cartitems <= index &&
+        index < cartpaper * cartitems
+      ) {
+        str += `<div class="cartoonLeftFooterF">
+            <a
+              href="${src}"
+              target="_blank"
+            >
+              <div id="img5">
+                <img src="${imgsrc}" alt="" />
+              </div>
+            
+              <video src="${videosrc}" muted></video>
+            </a>
+            
+            <div class="cartoonTv">
+              <div>
+                <span>
+                  <svg class="bili-video-card__stats--icon">
+                    <use xlink:href="#widget-video-play-count"></use>
+                  </svg>
+                  <span>${num}</span>
+                </span>
+                <span>
+                  <svg class="bili-video-card__stats--icon">
+                    <use xlink:href="#widget-video-danmaku"></use>
+                  </svg>
+                  <span>${vnum}</span>
+                </span>
+              </div>
+              <span>${time}</span>
+            </div>
+            <div class="cartoonTvText">
+              <h3>
+                <a
+                  href="${src}"
+                  >${title}</a
+                >
+              </h3>
+              <div>
+                <a
+                  href="${namesrc}"
+                >
+                  <svg class="bili-video-card__info--owner__up">
+                    <use xlink:href="#widget-up"></use>
+                  </svg>
+                  <span>${name}</span>
+                  <span>${data}</span>
+                </a>
+              </div>
+            </div>
+            </div>`;
+      }
+    });
+    cartoonLeftFooter.innerHTML = str;
+  };
+  cartoonrender();
+  btn3.onclick = function () {
+    svg3.style.transform == "rotate(360deg)"
+      ? (svg3.style.transform = "rotate(0deg)")
+      : (svg3.style.transform = "rotate(360deg)");
+    // cartpaper++;
+
+    if (cartoonData.length > cartpaper * cartitems) {
+      cartpaper++;
+    } else {
+      cartpaper = 1;
+    }
+    // if (cartpaper > cartoonData.length / cartitems) {
+    //   cartpaper = 1;
+    // }
+    cartoonrender();
+    adddelegators(".cartoonLeftFooterF>a", 0.2, ".cartoonTv");
+  };
+  //动画移入移出=========================================
+  adddelegators(".cartoonLeftFooterF>a", 0.2, ".cartoonTv");
+
+  //导航动态选项卡=====================================
+  const ramcut = function ramcut() {
+    let ul = document.querySelector(".ram>ul");
+    let li = ul.querySelectorAll("li");
+    let item = document.querySelectorAll(".ramItem");
+    ul.addEventListener("click", (e) => {
+      if (e.target.tagName == "LI") {
+        let type = e.target.getAttribute("data-index");
+        //判断是否包含动态两个字
+        for (let i = 0; i < ul.children.length; i++) {
+          ul.children[i].innerText = ul.children[i].innerText.substr(0, 2);
+        }
+
+        if (e.target.innerText.indexOf("动态") == -1) {
+          //ul.child.innerText=e.target.innerText.substr(0,2)
+          e.target.innerText.replace(
+            e.target.innerText,
+            (e.target.innerText += "动态")
+          );
+        }
+
+        item.forEach((item, index) => {
+          const key = index == type ? "add" : "remove";
+          item.classList[key]("active");
+          li[index].classList[key]("active");
+          /*           if (index == type) {
+
+          } else {
+            item.classList.remove("active");
+            li[index].classList.remove("active");
+          } */
+        });
+      }
+    });
+  };
+  ramcut();
+  //导航动态过渡===========================================
+  navtrans(".ram", ".ramtv");
+
+  //专栏换一换=================================================
+  let FeatureFooter = document.querySelector(".FeatureFooter");
+  let btn4 = document.querySelector(".FeatureHeaderR");
+  let svg4 = btn4.querySelector("svg");
+  //页数
+  let Featurepaper = 1;
+  //每页的个数
+  let Featureitems = 12;
+  const Featurerender = function Featurerender() {
+    let str = ``;
+    FeatureData.forEach((item, index) => {
+      const { src, imgsrc, title, name, data } = item;
+      if (
+        ((Featurepaper - 1) * Featureitems <= index) &
+        (index < Featurepaper * Featureitems)
+      ) {
+        str += `<div class="FeatureFooterItem">
+        <a
+          href="${src}"
+        >
+          <div>
+            <img src="${imgsrc}" alt="" />
+          </div>
+        </a>
+        <div class="pictureR">
+          <a href="" class="pictureRT">
+            <h3>${title}</h3>
+          </a>
+          <p>${name}</p>
+          <a href="" class="pictureRB">
+            <svg class="bili-article-card__icon">
+              <use xlink:href="#widget-up"></use>
+            </svg>
+            <p>${data}</p>
+          </a>
+        </div>
+      </div>`;
+      }
+    });
+    FeatureFooter.innerHTML = str;
+  };
+  Featurerender();
+  btn4.onclick = function () {
+    svg4.style.transform == "rotate(360deg)"
+      ? (svg4.style.transform = "rotate(0deg)")
+      : (svg4.style.transform = "rotate(360deg)");
+    if (FeatureData.length > Featurepaper * Featureitems) {
+      Featurepaper++;
+    } else {
+      Featurepaper = 1;
+    }
+    Featurerender();
+  };
+
+  //番剧动态换一换===============================================
+  let DynamicFooter = document.querySelector(".DynamicFooter");
+  let btn5 = document.querySelector(".DynamicHeaderR>button");
+  let svg5 = btn5.querySelector("svg");
+  //页数
+  let Dynamicpaper = 1;
+  let Dynamicitem = 10;
+  const bangumrender = function bangumrender() {
+    let str = ``;
+    bangumData.forEach((item, index) => {
+      const { src, imgsrc, num, vnum, title } = item;
+      if (
+        ((Dynamicpaper - 1) * Dynamicitem <= index) &
+        (index < Dynamicpaper * Dynamicitem)
+      ) {
+        str += `<div class="DynamicFooterF">
+        <a
+          href="${src}"
+          target="_blank"
+        >
+          <div id="img6">
+            <img src=${imgsrc} alt="" />
+          </div>
+        </a>
+  
+        <div class="DynamicFooterTV">
+          <div>
+            <span>
+              <svg class="bili-video-card__stats--icon">
+                <use xlink:href="#widget-video-play-count"></use>
+              </svg>
+              <span>${num}</span>
+            </span>
+            <span>
+              <svg class="bili-video-card__stats--icon">
+                <use xlink:href="#widget-video-danmaku"></use>
+              </svg>
+              <span>${vnum}</span>
+            </span>
+          </div>
+        </div>
+        <div class="DynamicFooterText">
+          <h3>
+            <a
+              href="${src}"
+              >${title}</a
+            >
+          </h3>
+        </div>
+      </div>`;
+      }
+    });
+    DynamicFooter.innerHTML = str;
+  };
+  bangumrender();
+  btn5.onclick = function () {
+    svg5.style.transform == "rotate(360deg)"
+      ? (svg5.style.transform = "rotate(0deg)")
+      : (svg5.style.transform = "rotate(360deg)");
+    if (bangumData.length > Dynamicpaper * Dynamicitem) {
+      Dynamicpaper++;
+    } else {
+      Dynamicpaper = 1;
+    }
+    bangumrender();
+  };
+  //导航栏效果========================================================================================================
+  let html = document.documentElement;
+  let navigation = document.querySelector(".navigation");
+  let navigationLeft = document.querySelectorAll(".navigationLeft>ul>li>a");
+  let navigationRight = document.querySelectorAll(".navigationRight>ul>li>a");
+  let searchBar = document.querySelector(".searchBar");
+  let inp = searchBar.querySelector("input");
+  const fixed = function fixed() {
+    if (html.scrollTop > 200) {
+      navigation.style.background = "#fff";
+      navigation.style.borderBottom = "2px solid #e0e0e0";
+      navigationLeft.forEach((item, index) => {
+        item.style.color = "#18191c";
+        navigationRight[index].style.color = "#18191c";
+      });
+      searchBar.style.background = "#e3e5e7";
+      inp.style.background = "#e3e5e7";
+    } else {
+      navigation.style.background = "transparent";
+      navigation.style.borderBottom = "none";
+      navigationLeft.forEach((item, index) => {
+        item.style.color = "#fff";
+        navigationRight[index].style.color = "#fff";
+      });
+    }
+  };
+  inp.onclick = () => {
+    searchBar.style.background = "#fff";
+  };
+
+  window.onscroll = fixed;
+
+  // 番剧切换=========================================
+
+  const bangumiSwitch = function () {
+    const btn = document.querySelectorAll(
+      ".bangumHeaderLTime .btn-item button"
+    );
+    const btnbg = document.querySelector(".bangumHeaderLTime .activebg");
+
+    const bangumiItem = document.querySelectorAll(
+      ".bangumFooter .bangumLeftFooterF"
+    );
+    btn.forEach((item, index) => {
+      item.addEventListener("click", (e) => {
+        btnbg.style.left = e.target.offsetLeft + "px";
+        btnbg.style.width = e.target.offsetWidth + "px";
+        btn.forEach((item) => {
+          item.classList.remove("button-active");
+        });
+        e.target.classList.add("button-active");
+        if (index == 0) {
+          bangumstateRender(
+            bangumstateData.filter((item) => item.recently == "1")
+          );
+        } else {
+          bangumstateRender(
+            bangumstateData.filter((item) => item.week == index)
+          );
+        }
+      });
+    });
+  };
+
+  bangumiSwitch();
+
+  //番剧动态选项卡===============================
+  let bangumFooter = document.querySelector(".bangumFooter");
+  const bangumstateRender = function bangumstateRender(data) {
+    let str = ``;
+    data.forEach((item, index) => {
+      const { ep_cover, follows, plays, pub_index, title, recently } = item;
+      str += `<div class="bangumLeftFooterF">
+      <a
+        href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+        target="_blank"
+      >
+        <div id="img5">
+          <img src="${ep_cover}" alt="" />
+        </div>
+      </a>
+  
+      <div class="bangumTv">
+        <div>
+          <span>
+            <svg class="bili-video-card__stats--icon">
+              <use xlink:href="#widget-video-play-count"></use>
+            </svg>
+            <span>${plays}</span>
+          </span>
+        </div>
+        <span>${follows}</span>
+      </div>
+      <div class="bangumTvText">
+        <h3>
+          <a
+            href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+            >${title}</a
+          >
+        </h3>
+        <div>
+          <a
+            href="https://www.bilibili.com/bangumi/play/ep625441?spm_id_from=333.1007.partition_recommend.content.click"
+          >
+            <span>更新至${pub_index}</span>
+          </a>
+        </div>
+      </div>
+    </div>`;
+    });
+    bangumFooter.innerHTML = str;
+  };
+  bangumstateRender(bangumstateData.filter((item) => item.recently == "1"));
 })();

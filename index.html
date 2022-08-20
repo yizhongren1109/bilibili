@@ -16,6 +16,73 @@
     <div id="app">
       <!-- 顶部容器 -->
       <div class="topCon">
+        <img class="bgi" src="./imgs/animation/zhankaitupian.png" alt="" />
+        <img class="image bg" src="./imgs/animation/bg.png" alt="" />
+        <video
+          class="video rain-bg"
+          src="./imgs/animation/xiayu.webm"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="video raindrop1"
+          src="./imgs/animation/chuanghuyudi.webm"
+          muted
+        ></video>
+        <video
+          class="video raindrop2"
+          src="./imgs/animation/chuanghuyudi.webm"
+          autoplay
+          muted
+        ></video>
+
+        <img
+          class="image show-image"
+          src="./imgs/animation/zhankaitupian.png"
+          alt=""
+        />
+        <img
+          class="image watch-tv"
+          src="./imgs/animation/diannaopingmu.png"
+          alt=""
+        />
+        <video
+          class="video person-video"
+          src="./imgs/animation/kanshu.webm"
+          autoplay
+          muted
+        ></video>
+        <video
+          class="video play"
+          src="./imgs/animation/dayouxi.webm"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          class="video play-tv"
+          src="./imgs/animation/youxipingmu.webm"
+          autoplay
+          loop
+          muted
+        ></video>
+        <audio class="person-audio" src=""></audio>
+        <audio
+          class="rain-audio"
+          src="./imgs/animation/yusheng.mp3"
+          loop
+        ></audio>
+        <div class="mask"></div>
+        <div class="iphone">
+          <img src="./imgs/animation/shoji.png" alt="" />
+          <div class="play-or-pause"></div>
+
+          <input type="range" class="my-range" max="1" min="0" step="0.01" />
+        </div>
+        <div class="close">
+          <img src="./imgs/animation/guanbi.png" alt="" />
+        </div>
         <!-- 导航 -->
         <div class="navigation">
           <div class="navigationLeft">
@@ -51,7 +118,8 @@
                   <span>番剧</span>
                 </a>
               </li>
-              <li>
+              <!-- 导航直播 -->
+              <li class="Satellitetv">
                 <a
                   href="https://live.bilibili.com/?spm_id_from=333.1007.0.0"
                   target="_blank"
@@ -59,7 +127,51 @@
                   <span>直播</span>
                 </a>
               </li>
-              <li>
+              <!-- 导航直播hover -->
+              <div class="Satellite">
+                <div class="SatelliteLeft">
+                  <div class="SatelliteLeftF">
+                    <h2>热门直播:</h2>
+                  </div>
+                  <div class="SatelliteLeftB">
+                    <div>
+                      <img src="./imgs/daohangzhibo1.webp" alt="" />
+                      <p>AG超玩会...</p>
+                    </div>
+                    <div>
+                      <img src="./imgs/daohangzhibo2.webp" alt="" />
+                      <p>哔哩哔哩...</p>
+                    </div>
+                    <div>
+                      <img src="./imgs/daohangzhibo3.webp" alt="" />
+                      <p>吃鸡赛事</p>
+                    </div>
+                    <div>
+                      <img src="./imgs/daohangzhibo4.webp" alt="" />
+                      <p>阿尔贝莱特</p>
+                    </div>
+                    <div>
+                      <img src="./imgs/daohangzhibo5.webp" alt="" />
+                      <p>完美世界...</p>
+                    </div>
+                    <div>
+                      <img src="./imgs/daohangzhibo6.webp" alt="" />
+                      <p>哔哩哔哩...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="SatelliteRight">
+                  <h3>热门活动</h3>
+                  <div>
+                    <img src="./imgs/remenhuodong1.webp" alt="" />
+                  </div>
+                  <div>
+                    <img src="./imgs/remenhuodong2.webp" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- 游戏中心 -->
+              <li class="gameCentertv">
                 <a
                   href="https://game.bilibili.com/platform/?spm_id_from=333.1007.0.0"
                   target="_blank"
@@ -67,6 +179,56 @@
                   <span>游戏中心</span>
                 </a>
               </li>
+              <!-- 游戏中心hover -->
+              <div class="gameCenter">
+                <div class="gameCenterLeft">
+                  <div class="gameCenterLeftH">
+                    <img src="./imgs/daohangyouxi1.webp" alt="" />
+                  </div>
+                  <div class="gameCenterLeftF">
+                    <div class="gameCenterLeftFL">
+                      <div>
+                        <img src="./imgs/daohangyouxi2.webp" alt="" />
+                      </div>
+                      <div>碧蓝航线</div>
+                    </div>
+                    <div class="gameCenterLeftFC">
+                      <div>
+                        <img src="./imgs/daohangyouxi3.webp" alt="" />
+                      </div>
+                      <div>坎特伯雷公主与...</div>
+                    </div>
+                    <div class="gameCenterLeftFR">
+                      <div>
+                        <img src="./imgs/daohangyouxi4.webp" alt="" />
+                      </div>
+                      <div>时空恋人3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gameCenterRight">
+                  <h2>新版预告</h2>
+                  <ul>
+                    <li>
+                      风色幻想命运传说
+                      <img src="./imgs/xinyou1.webp" alt="" />
+                    </li>
+                    <li>
+                      非匿名指令
+                      <img src="./imgs/xinyou2.webp" alt="" />
+                    </li>
+                    <li>代号：百家<img src="./imgs/xinyou3.webp" alt="" /></li>
+                    <li>彼界<img src="./imgs/xinyou4.webp" alt="" /></li>
+                    <li>
+                      代号：Dragon <img src="./imgs/xinyou5.webp" alt="" />
+                    </li>
+                    <li>雾境序列<img src="./imgs/xinyou6.webp" alt="" /></li>
+                    <li>
+                      空之要塞：启航<img src="./imgs/xinyou7.webp" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <li>
                 <a
                   href="https://show.bilibili.com/platform/home.html?msource=pc_web&spm_id_from=333.1007.0.0"
@@ -75,7 +237,8 @@
                   <span>会员购</span>
                 </a>
               </li>
-              <li>
+              <!-- 漫画 -->
+              <li class="animatortv">
                 <a
                   href="https://manga.bilibili.com/?from=bill_top_mnav&spm_id_from=333.1007.0.0"
                   target="_blank"
@@ -83,6 +246,62 @@
                   <span>漫画</span>
                 </a>
               </li>
+              <!-- 漫画hover -->
+              <div class="animator">
+                <div class="animatorLeft">
+                  <div>
+                    <img src="./imgs/manhua1.png@272w" alt="" />
+                    <p>航海王</p>
+                  </div>
+                  <div>
+                    <img src="./imgs/manhua2.jpg@272w" alt="" />
+                    <p>石之海（乔乔的奇妙...</p>
+                  </div>
+                  <div>
+                    <img src="./imgs/manhua3.png@272w" alt="" />
+                    <p>鬼灭之刃</p>
+                  </div>
+                  <div>
+                    <img src="./imgs/manhua4.jpg@272w" alt="" />
+                    <p>工作细胞</p>
+                  </div>
+                </div>
+                <div class="animatorRight">
+                  <h2>人气漫画</h2>
+                  <ul>
+                    <li>
+                      <span class="animatorRight1">1</span>
+                      <span>碧蓝之海</span>
+                      <img src="./imgs/manhuay1.webp" alt="" />
+                    </li>
+                    <li>
+                      <span class="animatorRight2">2</span>
+                      <span>我家老婆来...</span>
+                      <img src="./imgs/manhuay2.webp" alt="" />
+                    </li>
+                    <li>
+                      <span class="animatorRight3">3</span>
+                      <span>我的假女友...</span>
+                      <img src="./imgs/manhuay3.webp" alt="" />
+                    </li>
+                    <li>
+                      <span>4</span>
+                      <span>不小心救了...</span>
+                      <img src="./imgs/mahuay4.webp" alt="" />
+                    </li>
+                    <li>
+                      <span>5</span>
+                      <span>驭灵师</span>
+                      <img src="./imgs/manhuay5.webp" alt="" />
+                    </li>
+                    <li>
+                      <span>6</span>
+                      <span>间谍过家家</span>
+                      <img src="./imgs/manhuay6.webp" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <li>
                 <a
                   href="https://www.bilibili.com/match/home/?spm_id_from=333.1007.0.0"
@@ -91,7 +310,7 @@
                   <span>赛事</span>
                 </a>
               </li>
-              <li class="cancel">
+              <li class="cancel cancels">
                 <a
                   href="https://app.bilibili.com/?spm_id_from=333.1073.0.0"
                   target="_blank"
@@ -116,21 +335,312 @@
                   <span>下载客户端</span>
                 </a>
               </li>
+              <!-- 下载hover -->
+              <div class="down">
+                <div class="downLeft">
+                  <div>
+                    <svg>
+                      <use xlink:href="#history-ipad"></use>
+                    </svg>
+                    手机版
+                  </div>
+                  <div class="sub">扫码即可下载手机APP</div>
+                  <div>
+                    <img src="./imgs/download.png" alt="" />
+                  </div>
+                </div>
+
+                <div class="downRight">
+                  <div>
+                    <svg>
+                      <use xlink:href="#history-pc"></use>
+                    </svg>
+                    Windows版
+                  </div>
+                  <div class="sub">适合WIN设备</div>
+                  <div>
+                    <img src="./imgs/bilibili.png" alt="" />
+                  </div>
+                  <div class="download">立即下载</div>
+                </div>
+              </div>
             </ul>
           </div>
           <div class="searchBar">
             <input type="text" placeholder="游戏里的随机，原来都是假的？" />
-            <div></div>
+            <div class="sousuo">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.3451 15.2003C16.6377 15.4915 16.4752 15.772 16.1934 16.0632C16.15 16.1279 16.0958 16.1818 16.0525 16.2249C15.7707 16.473 15.4456 16.624 15.1854 16.3652L11.6848 12.8815C10.4709 13.8198 8.97529 14.3267 7.44714 14.3267C3.62134 14.3267 0.5 11.2314 0.5 7.41337C0.5 3.60616 3.6105 0.5 7.44714 0.5C11.2729 0.5 14.3943 3.59538 14.3943 7.41337C14.3943 8.98802 13.8524 10.5087 12.8661 11.7383L16.3451 15.2003ZM2.13647 7.4026C2.13647 10.3146 4.52083 12.6766 7.43624 12.6766C10.3517 12.6766 12.736 10.3146 12.736 7.4026C12.736 4.49058 10.3517 2.1286 7.43624 2.1286C4.50999 2.1286 2.13647 4.50136 2.13647 7.4026Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <div class="searchBarFocus">
+              <div class="FocusHeader">热搜</div>
+              <div class="FocusFooter">
+                <div class="focusLeft">
+                  <div class="focusItem">
+                    <div>1</div>
+                    <div>FPX战胜OMG</div>
+                    <img src="./imgs/xin.png@28h" alt="" />
+                  </div>
+                  <div class="focusItem">
+                    <div>2</div>
+                    <div>鲁班大师KPL新皮肤</div>
+                  </div>
+                  <div class="focusItem">
+                    <div>3</div>
+                    <div>2233生日曲</div>
+                    <img src="./imgs/re.png@28h" alt="" />
+                  </div>
+                  <div class="focusItem">
+                    <div>4</div>
+                    <div>熟悉却不知歌名的BGM</div>
+                    <img src="./imgs/re.png@28h" alt="" />
+                  </div>
+                  <div class="focusItem">
+                    <div>5</div>
+                    <div>印度足协被全球禁赛</div>
+                    <img src="./imgs/re.png@28h" alt="" />
+                  </div>
+                </div>
+                <div class="focusRight">
+                  <div class="focusItem">
+                    <div>6</div>
+                    <div>男女大学生开学区别</div>
+                    <img src="./imgs/xin.png@28h" alt="" />
+                  </div>
+                  <div class="focusItem">
+                    <div>7</div>
+                    <div>未来AI伴侣或成现实</div>
+                    <img src="./imgs/xin.png@28h" alt="" />
+                  </div>
+                  <div class="focusItem">
+                    <div>8</div>
+                    <div>在B站开直播抓偷车者</div>
+                  </div>
+                  <div class="focusItem">
+                    <div>9</div>
+                    <div>重庆51条河流断流</div>
+                  </div>
+                  <div class="focusItem">
+                    <div>10</div>
+                    <div>老番茄某幻君塑料兄弟</div>
+                    <img src="./imgs/xin.png@28h" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="navigationRight">
             <ul>
-              <li>
+              <li class="photo">
                 <a href="" class="">
                   <img src="./imgs/头像.webp" alt="" />
                 </a>
+                <div class="photoHover">
+                  <div class="photoHover1">赵小赵357</div>
+                  <div class="photoHover2">
+                    <div>硬币：<span>288</span></div>
+                    <div>B币：<span>0</span></div>
+                  </div>
+                  <div class="photoHover3">
+                    <svg
+                      t="1641783313248"
+                      class="icon"
+                      viewBox="0 0 1901 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      p-id="2929"
+                      width="200"
+                      height="200"
+                    >
+                      <path
+                        d="M146.285714 174.811429h1609.142857v707.364571H146.285714z"
+                        fill="#FFFFFF"
+                        p-id="2930"
+                      ></path>
+                      <path
+                        class="level-bg"
+                        d="M1757.622857 73.142857c24.795429 0 49.517714 24.722286 43.373714 49.444572v747.446857a48.859429 48.859429 0 0 1-49.590857 49.371428H122.660571A48.786286 48.786286 0 0 1 73.142857 870.034286V209.042286c0-24.722286 18.578286-49.444571 49.517714-49.444572h1021.805715v-37.010285c0-24.722286 18.651429-49.444571 49.590857-49.444572h563.565714zM710.948571 264.630857h-49.517714c-18.578286 0-37.156571 18.578286-37.156571 37.083429v302.665143c0 13.165714 0 32.987429 6.217143 37.083428l173.348571 172.909714c11.044571 10.971429 36.717714 12.214857 42.349714 12.434286h1.024s31.012571 0 43.373715-12.434286l185.782857-172.909714c6.217143-6.217143 6.217143-18.505143 6.217143-30.866286V307.858286c0-18.505143-18.578286-37.010286-37.156572-37.010286h-49.517714c-18.651429 0-37.229714 18.505143-37.229714 37.010286v277.942857l-105.325715 105.033143L748.251429 585.874286V301.714286c0-18.505143-18.651429-37.083429-37.156572-37.083429z m-445.878857 0h-49.590857c-18.578286 0-37.156571 18.578286-37.156571 37.083429v488.009143c0 18.505143 18.578286 37.010286 37.156571 37.010285h297.325714c18.578286 0 37.156571-18.505143 37.156572-37.010285v-49.444572c0-18.578286-18.578286-37.083429-37.156572-37.083428h-210.651428v-401.554286c0-18.432-18.505143-37.010286-37.083429-37.010286zM1664.731429 171.958857h-384c-18.578286 0-37.083429 18.505143-37.083429 37.010286v49.444571c0 18.505143 18.505143 37.083429 37.083429 37.083429h297.252571v142.043428h-297.252571c-18.578286 0-37.083429 18.505143-37.083429 37.083429v49.444571c0 18.505143 18.505143 37.010286 37.083429 37.010286h297.252571v142.116572h-297.252571c-18.578286 0-37.083429 18.432-37.083429 37.010285v49.444572c0 18.505143 18.505143 37.083429 37.083429 37.083428h384c18.578286 0 37.156571-18.578286 37.156571-37.083428V208.969143c0-18.505143-18.578286-37.010286-37.156571-37.010286z"
+                        fill="#7BCDEF"
+                        p-id="2931"
+                      ></path>
+                    </svg>
+                    <div class="planup"></div>
+                    <div class="plan"></div>
+                    <div class="exp">
+                      <p class="vipgrade">作为Lv.3,你可以：</p>
+                      <div class="send">
+                        <h4>一、发送个性弹幕</h4>
+                        <p>包括彩色、高级、顶部</p>
+                      </div>
+                      <div>
+                        <h4>二、参与社区互动</h4>
+                        <p>包括评论、私信、动态</p>
+                      </div>
+                      <p class="vip">会员等级相关说明></p>
+                    </div>
+                    <svg
+                      t="1641783415042"
+                      class="icon"
+                      viewBox="0 0 1901 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      p-id="3057"
+                      width="200"
+                      height="200"
+                    >
+                      <path
+                        d="M154.916571 159.890286h1609.142858v707.364571h-1609.142858z"
+                        fill="#FFFFFF"
+                        p-id="3058"
+                      ></path>
+                      <path
+                        class="level-bg"
+                        d="M1757.622857 73.142857c24.795429 0 49.517714 24.722286 43.373714 49.444572v747.446857a48.859429 48.859429 0 0 1-49.590857 49.371428H122.660571A48.786286 48.786286 0 0 1 73.142857 870.034286V209.042286c0-24.722286 18.578286-49.444571 49.517714-49.444572h1021.805715v-37.010285c0-24.722286 18.651429-49.444571 49.590857-49.444572h563.565714zM710.948571 264.630857h-49.517714c-18.578286 0-37.156571 18.578286-37.156571 37.083429v309.248c0.146286 13.238857 0.877714 26.770286 6.217143 30.500571l173.348571 172.909714c12.434286 12.434286 43.373714 12.434286 43.373714 12.434286h1.097143c5.558857-0.219429 31.232-1.462857 42.276572-12.434286l185.782857-172.909714c6.217143-6.217143 6.217143-18.505143 6.217143-30.866286V307.858286c0-18.505143-18.578286-37.010286-37.156572-37.010286h-49.517714c-18.651429 0-37.229714 18.505143-37.229714 37.010286v277.942857l-105.325715 105.033143L748.251429 585.874286V301.714286c0-18.505143-18.651429-37.083429-37.156572-37.083429z m-445.878857 0h-49.590857c-18.578286 0-37.156571 18.578286-37.156571 37.083429v488.009143c0 18.505143 18.578286 37.010286 37.156571 37.010285h297.325714c18.578286 0 37.156571-18.505143 37.156572-37.010285v-49.444572c0-18.578286-18.578286-37.083429-37.156572-37.083428h-210.651428v-401.554286c0-18.432-18.505143-37.010286-37.083429-37.010286z m1065.179429-92.672h-49.517714c-18.578286 0-37.083429 18.505143-37.083429 37.010286v315.026286c0 18.578286 18.505143 37.083429 37.083429 37.083428h297.252571v228.571429c0 18.505143 18.578286 37.083429 37.229714 37.083428h49.517715c18.578286 0 37.156571-18.578286 37.156571-37.083428V208.969143c0-18.505143-18.578286-37.010286-37.156571-37.010286h-49.517715c-18.651429 0-37.229714 18.505143-37.229714 37.010286v228.571428h-210.505143V208.969143c0-18.505143-18.651429-37.010286-37.229714-37.010286z"
+                        fill="#FEBB8B"
+                        p-id="3059"
+                        style="fill: #c9ccd0"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="photoHover4">
+                    当前成长2960，距离升级Lv.4 还需要1540
+                  </div>
+                  <div class="photoHover5">
+                    <div class="photoHover5Item">
+                      <div>10</div>
+                      <div>关注</div>
+                    </div>
+                    <div class="photoHover5Item">
+                      <div>0</div>
+                      <div>粉丝</div>
+                    </div>
+                    <div class="photoHover5Item">
+                      <div>1</div>
+                      <div>动态</div>
+                    </div>
+                  </div>
+                  <div class="photoHover6">
+                    <div class="photoHover6Item">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="link-icon"
+                      >
+                        <rect
+                          opacity="0.01"
+                          width="18"
+                          height="18"
+                          fill="white"
+                        ></rect>
+                        <path
+                          d="M12.1146 9.48983C13.2763 8.63331 14.0299 7.2548 14.0299 5.7035C14.0299 3.11005 11.9198 1 9.32636 1C6.73291 1 4.62286 3.11005 4.62286 5.7035C4.62286 7.2548 5.37829 8.63331 6.53808 9.48983C3.87662 10.589 2 13.2118 2 16.2648C2 16.671 2.32901 17 2.73521 17C3.14141 17 3.47042 16.671 3.47042 16.2648C3.47042 13.0335 6.09879 10.407 9.3282 10.407C12.5576 10.407 15.186 13.0354 15.186 16.2648C15.186 16.671 15.515 17 15.9212 17C16.3274 17 16.6564 16.671 16.6564 16.2648C16.6546 13.2118 14.7761 10.589 12.1146 9.48983ZM6.09144 5.7035C6.09144 3.91878 7.54348 2.46858 9.32636 2.46858C11.1092 2.46858 12.5613 3.92062 12.5613 5.7035C12.5613 7.48639 11.1092 8.93843 9.32636 8.93843C7.54348 8.93843 6.09144 7.48639 6.09144 5.7035Z"
+                          fill="#61666D"
+                        ></path>
+                      </svg>
+                      <span>个人中心</span>
+                    </div>
+                    <svg style="color: #61666d">
+                      <use xlink:href="#widget-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="photoHover6">
+                    <div class="photoHover6Item">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="link-icon"
+                      >
+                        <rect
+                          opacity="0.01"
+                          width="18"
+                          height="18"
+                          fill="#C4C4C4"
+                        ></rect>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.375 1.875H10.875C12.739 1.875 14.25 3.38604 14.25 5.25V7.875V8.625C14.25 9.03921 14.5858 9.375 15 9.375C15.4142 9.375 15.75 9.03921 15.75 8.625V7.875V5.25C15.75 2.55761 13.5674 0.375 10.875 0.375H3.375C2.33947 0.375 1.5 1.21447 1.5 2.25V15C1.5 16.0355 2.33947 16.875 3.375 16.875H6.75H7.5C7.91421 16.875 8.25 16.5392 8.25 16.125C8.25 15.7108 7.91421 15.375 7.5 15.375H6.75H3.375C3.16789 15.375 3 15.2071 3 15V2.25C3 2.04289 3.16789 1.875 3.375 1.875ZM10.4 8.51962C10.8 8.28868 10.8 7.71132 10.4 7.48038L7.7 5.92154C7.3 5.6906 6.8 5.97927 6.8 6.44115V9.55885C6.8 10.0207 7.3 10.3094 7.7 10.0785L10.4 8.51962ZM15.518 14.2511L14.3215 16.3234H11.9285L10.7321 14.2511L11.9285 12.1787H14.3215L15.518 14.2511ZM16.817 13.5011C17.0849 13.9652 17.0849 14.537 16.817 15.0011L15.6205 17.0734C15.3526 17.5375 14.8574 17.8234 14.3215 17.8234H11.9285C11.3926 17.8234 10.8974 17.5375 10.6295 17.0734L9.43302 15.0011C9.16507 14.537 9.16507 13.9652 9.43302 13.5011L10.6295 11.4287C10.8974 10.9646 11.3926 10.6787 11.9285 10.6787H14.3215C14.8574 10.6787 15.3526 10.9646 15.6205 11.4287L16.817 13.5011ZM13.125 13.3125C12.6072 13.3125 12.1875 13.7322 12.1875 14.25C12.1875 14.7678 12.6072 15.1875 13.125 15.1875C13.6428 15.1875 14.0625 14.7678 14.0625 14.25C14.0625 13.7322 13.6428 13.3125 13.125 13.3125Z"
+                          fill="#61666D"
+                        ></path>
+                      </svg>
+                      <span>投稿管理</span>
+                    </div>
+                    <svg style="color: #61666d">
+                      <use xlink:href="#widget-arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="photoHover8">
+                    <div class="photoHover6Item">
+                      <svg style="color: #61666d">
+                        <use xlink:href="#header-collect"></use>
+                      </svg>
+                      <span>推荐服务</span>
+                    </div>
+                    <svg style="color: #61666d">
+                      <use xlink:href="#widget-arrow"></use>
+                    </svg>
+                    <div class="letter">
+                      <div>
+                        <svg style="color: #61666d; height: 18px; width: 18px">
+                          <use xlink:href="#user-live"></use>
+                        </svg>
+                        <span>直播中心</span>
+                      </div>
+                      <div>
+                        <svg style="color: #61666d; height: 18px; width: 18px">
+                          <use xlink:href="#user-cheese"></use>
+                        </svg>
+                        <span>我的课程</span>
+                      </div>
+                      <div>
+                        <svg style="color: #61666d; height: 18px; width: 18px">
+                          <use xlink:href="#user-pay"></use>
+                        </svg>
+                        <span>B币钱包</span>
+                      </div>
+                      <div>
+                        <svg style="color: #61666d; height: 18px; width: 18px">
+                          <use xlink:href="#header-order"></use>
+                        </svg>
+                        <span>订单中心</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="photoHover7"></div>
+                  <div class="photoHover6">
+                    <div class="photoHover6Item">
+                      <svg style="color: #61666d">
+                        <use xlink:href="#user-logout"></use>
+                      </svg>
+                      <span>推出登录</span>
+                    </div>
+                    <svg style="color: #61666d">
+                      <use xlink:href="#widget-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
               </li>
-              <li>
+
+              <li class="bigViptv">
                 <a
                   href="https://account.bilibili.com/account/big?spm_id_from=333.1073.0.0"
                 >
@@ -164,7 +674,17 @@
                   <span>大会员</span>
                 </a>
               </li>
-              <li>
+              <div class="bigVip">
+                <div class="bigVip1">精彩推荐</div>
+                <div class="bigVip2">
+                  <img src="./imgs/dahuiyuan.png" alt="" />
+                  <p>
+                    大会员可畅想各种专属内容，还有游戏礼包，个性装扮等你来拿
+                  </p>
+                </div>
+                <button>开通大会员</button>
+              </div>
+              <li class="newstv">
                 <a
                   href="https://message.bilibili.com/?spm_id_from=333.1073.0.0#/reply"
                 >
@@ -188,7 +708,14 @@
                   <span>消息</span>
                 </a>
               </li>
-              <li>
+              <div class="news">
+                <div>回复我的</div>
+                <div>@我的</div>
+                <div>收到的赞</div>
+                <div>系统消息</div>
+                <div>我的消息</div>
+              </div>
+              <li class="ramtv">
                 <a href="https://t.bilibili.com/?spm_id_from=333.1073.0.0">
                   <svg
                     width="20"
@@ -238,6 +765,54 @@
                   <span>动态</span>
                 </a>
               </li>
+              <div class="ram">
+                <ul>
+                  <li data-index="0" class="active">视频动态</li>
+                  <li data-index="1">直播</li>
+                  <li data-index="2">专栏</li>
+                </ul>
+                <div class="ramItem active">
+                  <div class="ramItem1">暂时没有新动态了哦！</div>
+                  <div class="ramH">历史动态</div>
+                  <div class="ramItemhistory">
+                    <div><img src="./imgs/shipindongtai1.webp" alt="" /></div>
+                    <div class="ramItemhistory1">
+                      <p>小米公司</p>
+                      <p>自动驾驶技术太复杂？看完这个你就明白了。</p>
+                      <p>昨天</p>
+                    </div>
+                    <div><img src="./imgs/shipindongtai2.webp" alt="" /></div>
+                  </div>
+                </div>
+                <div class="ramItem">
+                  <div class="ramItem1">暂时没有新动态了哦！</div>
+                  <div class="ramH">历史动态</div>
+                  <div class="ramItemhistory">
+                    <div><img src="./imgs/shipindongtai3.webp" alt="" /></div>
+                    <div class="ramItemhistory1">
+                      <p>木鱼水心</p>
+                      <p>
+                        全程挂机却成MVP？运气来了，挡都挡不住！《水浒传》P34
+                      </p>
+                      <p>8月13日</p>
+                    </div>
+                    <div><img src="./imgs/shipindongtai4.webp" alt="" /></div>
+                  </div>
+                </div>
+                <div class="ramItem">
+                  <div class="ramItem1">暂时没有新动态了哦！</div>
+                  <div class="ramH">历史动态</div>
+                  <div class="ramItemhistory">
+                    <div><img src="./imgs/shipindongtai5.webp" alt="" /></div>
+                    <div class="ramItemhistory1">
+                      <p>超级桂花糕</p>
+                      <p>《录音混音课程》大纲与报名</p>
+                      <p>4月11日</p>
+                    </div>
+                    <div><img src="./imgs/shipindongtai6.webp" alt="" /></div>
+                  </div>
+                </div>
+              </div>
               <li>
                 <a
                   href="https://space.bilibili.com/402000883/favlist?spm_id_from=333.1073.0.0"
@@ -356,7 +931,7 @@
                   <span>创作中心</span>
                 </a>
               </li>
-              <li>
+              <li class="contributetv">
                 <a
                   href="https://member.bilibili.com/platform/upload/video/frame?spm_id_from=333.1073.top_bar.upload"
                   class="portrait"
@@ -396,29 +971,40 @@
                   </div>
                 </a>
               </li>
+              <div class="contribute">
+                <div>
+                  <svg style="color: #61666d">
+                    <use xlink:href="#creator-note"></use>
+                  </svg>
+                  <div>专栏投稿</div>
+                </div>
+                <div>
+                  <svg style="color: #61666d">
+                    <use xlink:href="#creator-audio"></use>
+                  </svg>
+                  <div>音频投稿</div>
+                </div>
+                <div>
+                  <svg style="color: #61666d">
+                    <use xlink:href="#creator-magic"></use>
+                  </svg>
+                  <div>贴纸投稿</div>
+                </div>
+                <div>
+                  <svg style="color: #61666d">
+                    <use xlink:href="#creator-video"></use>
+                  </svg>
+                  <div>视频投稿</div>
+                </div>
+                <div>
+                  <svg style="color: #61666d">
+                    <use xlink:href="#creator-manage"></use>
+                  </svg>
+                  <div>投稿管理</div>
+                </div>
+              </div>
             </ul>
           </div>
-        </div>
-        <!-- 动画 -->
-        <div class="banner">
-          <a href="https://www.bilibili.com/?spm_id_from=333.1073.0.0">
-            <img src="./imgs/logo.png" alt="" />
-          </a>
-        </div>
-        <div class="shut">
-          <img src="./imgs/下载 (1)" alt="" />
-        </div>
-        <!-- 看书任人物 -->
-        <div class="figure">
-          <video src="./imgs/1.webm" autoplay loop muted></video>
-        </div>
-        <!-- 玩游戏人物 -->
-        <div class="Game">
-          <video src="./imgs/2.webm" autoplay loop muted></video>
-        </div>
-        <!-- 游戏 -->
-        <div class="Games">
-          <video src="./imgs/youxipingmu.webm" autoplay loop muted></video>
         </div>
       </div>
       <!-- 主体 居中 -->
@@ -620,7 +1206,6 @@
                   <li>人力VOCALOID</li>
                   <li>鬼畜剧场</li>
                   <li>教程演示</li>
-                 
                 </ul></a
               >
               <a
@@ -948,8 +1533,14 @@
                 <li></li>
               </ul>
 
-              <button class="houtui">上一个</button>
-              <button class="qianjin">下一个</button>
+              <button class="houtui">
+                <svg style="transform: rotate(180deg)">
+                  <use xlink:href="#widget-arrow"></use>
+                </svg>
+              </button>
+              <button class="qianjin">
+                <svg><use xlink:href="#widget-arrow"></use></svg>
+              </button>
             </div>
             <div class="mengceng"></div>
           </div>
@@ -1012,10 +1603,7 @@
                   <img src="./imgs/tuiguang2.jpg" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/tuiguang2.mp4"
-                  muted
-                ></video>
+                <video src="./imgs/tuiguang2.mp4" muted></video>
               </a>
 
               <div class="transition">
@@ -1089,10 +1677,7 @@
                   <img src="./imgs/tuiguangimg2.webp" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/tuiguang4.mp4"
-                  muted
-                ></video>
+                <video src="./imgs/tuiguang4.mp4" muted></video>
               </a>
 
               <div class="transition">
@@ -1135,17 +1720,14 @@
             <!-- 5 -->
             <div class="delegatorsB">
               <a
-                href="https://www.bilibili.com/video/BV1vG411b75F?spm_id_from=333.1007.extension.content.click&v"
+                href="https://www.bilibili.com/video/BV1nv4y1g7xR?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                 target="_blank"
               >
                 <div id="img2">
-                  <img src="./imgs/tuiguang2.jpg" alt="" />
+                  <img src="./imgs/tuiguangimg5.jpg" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/tuiguang2.mp4"
-                  muted
-                ></video>
+                <video src="./imgs/tuiguang5.mp4" muted></video>
               </a>
 
               <div class="transition">
@@ -1154,33 +1736,33 @@
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-play-count"></use>
                     </svg>
-                    <span>26.8万</span>
+                    <span>7万</span>
                   </span>
                   <span>
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-danmaku"></use>
                     </svg>
-                    <span>122</span>
+                    <span>126</span>
                   </span>
                 </div>
-                <span>00：14</span>
+                <span>01：33</span>
               </div>
               <div class="introduct">
                 <h3>
                   <a
-                    href="https://www.bilibili.com/video/BV1vG411b75F?spm_id_from=333.1007.extension.content.click&v"
-                    >小刻晴要战斗</a
+                    href="https://www.bilibili.com/video/BV1nv4y1g7xR?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
+                    >【罐子】Alcohol-Free-开开心心夏日微醺-drunk in you</a
                   >
                 </h3>
                 <div>
                   <a
-                    href="https://space.bilibili.com/403425503?spm_id_from=333.1007.extension.content.click"
+                    href="https://www.bilibili.com/video/BV1nv4y1g7xR?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                   >
                     <svg class="bili-video-card__info--owner__up">
                       <use xlink:href="#widget-up"></use>
                     </svg>
-                    <span>甜甜草酿鸡</span>
-                    <span>· 8-6</span>
+                    <span>罐子pia</span>
+                    <span>· 6-18</span>
                   </a>
                 </div>
               </div>
@@ -1207,16 +1789,10 @@
                 target="_blank"
               >
                 <div id="img3">
-                  <img
-                    src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】.jpg"
-                    alt=""
-                  />
+                  <img src="./imgs/saishi1.jpg" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】 - 1.坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】(Av512992468,P1).mp4"
-                  muted
-                ></video>
+                <video src="./imgs/saishi1.mp4" muted></video>
               </a>
 
               <div class="sinatv">
@@ -1265,20 +1841,14 @@
             <!-- 2 -->
             <div class="CompetitionBottomF">
               <a
-                href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                href="https://www.bilibili.com/video/BV16L4y1P7BL?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                 target="_blank"
               >
                 <div id="img3">
-                  <img
-                    src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】.jpg"
-                    alt=""
-                  />
+                  <img src="./imgs/saishi2.webp" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】 - 1.坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】(Av512992468,P1).mp4"
-                  muted
-                ></video>
+                <video src="./imgs/saishi2.mp4" muted></video>
               </a>
 
               <div class="sinatv">
@@ -1287,7 +1857,7 @@
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-play-count"></use>
                     </svg>
-                    <span>187.7万</span>
+                    <span>18.7万</span>
                   </span>
                   <span>
                     <svg class="bili-video-card__stats--icon">
@@ -1296,30 +1866,28 @@
                     <span>3303</span>
                   </span>
                 </div>
-                <span>01：56</span>
+                <span>02：01</span>
               </div>
               <div class="sinatvtext">
                 <h3>
                   <a
-                    href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                    href="https://www.bilibili.com/video/BV16L4y1P7BL?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                   >
                     <div>
                       <img src="./imgs/live.gif" alt="" />
                       <span>直播中</span>
                     </div>
-                    <span
-                      >坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】</span
-                    >
+                    <span>【小暮】终 极 糖 豆 人 ！</span>
                   </a>
                 </h3>
                 <div>
                   <a
-                    href="https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.2https://space.bilibili.com/403425503?spm_id_from=333.1007.extension.cclickontent."
+                    href="https://space.bilibili.com/5128039?spm_id_from=333.851.b_7265636f6d6d656e64.2"
                   >
                     <svg class="bili-video-card__info--owner__up">
                       <use xlink:href="#widget-up"></use>
                     </svg>
-                    <span>晓丹小仙女儿</span>
+                    <span>小暮mumu</span>
                   </a>
                 </div>
               </div>
@@ -1327,20 +1895,14 @@
             <!-- 3 -->
             <div class="CompetitionBottomF">
               <a
-                href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                href="https://www.bilibili.com/video/BV1V3411u75L?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                 target="_blank"
               >
                 <div id="img3">
-                  <img
-                    src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】.jpg"
-                    alt=""
-                  />
+                  <img src="./imgs/saishi3.webp" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】 - 1.坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】(Av512992468,P1).mp4"
-                  muted
-                ></video>
+                <video src="./imgs/saishi3.mp4" muted></video>
               </a>
 
               <div class="sinatv">
@@ -1349,13 +1911,13 @@
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-play-count"></use>
                     </svg>
-                    <span>187.7万</span>
+                    <span>34万</span>
                   </span>
                   <span>
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-danmaku"></use>
                     </svg>
-                    <span>3303</span>
+                    <span>2097</span>
                   </span>
                 </div>
                 <span>01：56</span>
@@ -1363,25 +1925,23 @@
               <div class="sinatvtext">
                 <h3>
                   <a
-                    href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                    href="https://www.bilibili.com/video/BV1V3411u75L?spm_id_from=333.851.b_7265636f6d6d656e64.2&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                   >
                     <div>
                       <img src="./imgs/live.gif" alt="" />
                       <span>直播中</span>
                     </div>
-                    <span
-                      >坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】</span
-                    >
+                    <span>【日青】如果是这样的海盗，那你愿意上我的船吗？</span>
                   </a>
                 </h3>
                 <div>
                   <a
-                    href="https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.2https://space.bilibili.com/403425503?spm_id_from=333.1007.extension.cclickontent."
+                    href="https://space.bilibili.com/31715894?spm_id_from=333.851.b_7265636f6d6d656e64.2"
                   >
                     <svg class="bili-video-card__info--owner__up">
                       <use xlink:href="#widget-up"></use>
                     </svg>
-                    <span>晓丹小仙女儿</span>
+                    <span>-是日青呀-</span>
                   </a>
                 </div>
               </div>
@@ -1389,20 +1949,14 @@
             <!-- 4 -->
             <div class="CompetitionBottomF">
               <a
-                href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                href="https://www.bilibili.com/video/BV1HB4y1a7Q3?spm_id_from=333.851.b_7265636f6d6d656e64.2"
                 target="_blank"
               >
                 <div id="img3">
-                  <img
-                    src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】.jpg"
-                    alt=""
-                  />
+                  <img src="./imgs/saishi4.webp" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】 - 1.坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】(Av512992468,P1).mp4"
-                  muted
-                ></video>
+                <video src="./imgs/saishi4.mp4" muted></video>
               </a>
 
               <div class="sinatv">
@@ -1411,39 +1965,37 @@
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-play-count"></use>
                     </svg>
-                    <span>187.7万</span>
+                    <span>5.9万</span>
                   </span>
                   <span>
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-danmaku"></use>
                     </svg>
-                    <span>3303</span>
+                    <span>67</span>
                   </span>
                 </div>
-                <span>01：56</span>
+                <span>01：08</span>
               </div>
               <div class="sinatvtext">
                 <h3>
                   <a
-                    href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                    href="https://www.bilibili.com/video/BV1HB4y1a7Q3?spm_id_from=333.851.b_7265636f6d6d656e64.2"
                   >
                     <div>
                       <img src="./imgs/live.gif" alt="" />
                       <span>直播中</span>
                     </div>
-                    <span
-                      >坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】</span
-                    >
+                    <span>夏日清单-1~清凉 元气《POP!》翻跳</span>
                   </a>
                 </h3>
                 <div>
                   <a
-                    href="https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.2https://space.bilibili.com/403425503?spm_id_from=333.1007.extension.cclickontent."
+                    href="https://space.bilibili.com/521444?spm_id_from=333.851.b_7265636f6d6d656e64.2"
                   >
                     <svg class="bili-video-card__info--owner__up">
                       <use xlink:href="#widget-up"></use>
                     </svg>
-                    <span>晓丹小仙女儿</span>
+                    <span>西四炸弹</span>
                   </a>
                 </div>
               </div>
@@ -1451,20 +2003,14 @@
             <!-- 5 -->
             <div class="CompetitionBottomF">
               <a
-                href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                href="https://www.bilibili.com/video/BV1pt4y1V7DQ?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                 target="_blank"
               >
                 <div id="img3">
-                  <img
-                    src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】.jpg"
-                    alt=""
-                  />
+                  <img src="./imgs/saishi5.webp" alt="" />
                 </div>
 
-                <video
-                  src="./imgs/坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】 - 1.坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】(Av512992468,P1).mp4"
-                  muted
-                ></video>
+                <video src="./imgs/saishi5.mp4" muted></video>
               </a>
 
               <div class="sinatv">
@@ -1473,39 +2019,37 @@
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-play-count"></use>
                     </svg>
-                    <span>187.7万</span>
+                    <span>9万</span>
                   </span>
                   <span>
                     <svg class="bili-video-card__stats--icon">
                       <use xlink:href="#widget-video-danmaku"></use>
                     </svg>
-                    <span>3303</span>
+                    <span>135</span>
                   </span>
                 </div>
-                <span>01：56</span>
+                <span>01：11</span>
               </div>
               <div class="sinatvtext">
                 <h3>
                   <a
-                    href="https://www.bilibili.com/video/BV1M3411A7vJ?spm_id_from=333.851.b_7265636f6d6d656e64.2"
+                    href="https://www.bilibili.com/video/BV1pt4y1V7DQ?spm_id_from=333.851.b_7265636f6d6d656e64.1&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                   >
                     <div>
                       <img src="./imgs/live.gif" alt="" />
                       <span>直播中</span>
                     </div>
-                    <span
-                      >坚持了115秒…再跳就要变回鱼尾巴了！【镜中渊-原创编舞】</span
-                    >
+                    <span>【Mystery少女企划】POP！但是重庆妹子团舞版</span>
                   </a>
                 </h3>
                 <div>
                   <a
-                    href="https://space.bilibili.com/21648772?spm_id_from=333.851.b_7265636f6d6d656e64.2https://space.bilibili.com/403425503?spm_id_from=333.1007.extension.cclickontent."
+                    href="https://space.bilibili.com/677770326?spm_id_from=333.851.b_7265636f6d6d656e64.1"
                   >
                     <svg class="bili-video-card__info--owner__up">
                       <use xlink:href="#widget-up"></use>
                     </svg>
-                    <span>晓丹小仙女儿</span>
+                    <span>Mystery少女企划</span>
                   </a>
                 </div>
               </div>
@@ -1537,7 +2081,7 @@
               </div>
               <div class="broadcastHeaderR">
                 <button>
-                  <svg style="transform: rotate(2880deg)">
+                  <svg style="transform: rotate(0deg)">
                     <use xlink:href="#widget-roll"></use>
                   </svg>
                   <span>换一换</span>
@@ -1551,7 +2095,7 @@
             <!-- 尾部 -->
             <div class="broadcastFooter">
               <!-- 1 -->
-              <div class="broadcastFooterF">
+              <!--               <div class="broadcastFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
                   target="_blank"
@@ -1609,427 +2153,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
-              <!-- 2 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 3 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 4 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 5 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 6 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 7 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- 8 -->
-              <div class="broadcastFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                  target="_blank"
-                >
-                  <div id="img4">
-                    <img
-                      src="./imgs/新中式穿搭｜不同风格的国风少女.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <video
-                    src="./imgs/新中式穿搭｜不同风格的国风少女.mp4"
-                    muted
-                  ></video>
-                </a>
-
-                <div class="broadcastFootertv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>45.7万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>9.8</span>
-                    </span>
-                  </div>
-                  <span>01：54</span>
-                </div>
-                <div class="broadcastFootertvtext">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV1dY4y1A7AV?spm_id_from=333.851.b_7265636f6d6d656e64.4&vd_source=a73fe1f4087fa6cbe06a214f5765292f"
-                    >
-                      <div>
-                        <img src="./imgs/live.gif" alt="" />
-                        <span>直播中</span>
-                      </div>
-                      <span>新中式穿搭｜不同风格的...</span>
-                    </a>
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/4099287?spm_id_from=333.851.b_7265636f6d6d656e64.4"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>佳茗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- 直播右排行表 -->
@@ -2047,7 +2171,7 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop1.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
@@ -2071,18 +2195,18 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop2.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>哔哩哔哩王者荣耀赛事</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>【直播】佛山DRG.G...</p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>758.8万</span>
                           </div>
                         </div>
                       </div>
@@ -2095,18 +2219,18 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop3.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>老实憨厚的笑笑</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>德云色7点解说然后一...</p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>675.3万</span>
                           </div>
                         </div>
                       </div>
@@ -2119,18 +2243,18 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop4.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>吃鸡赛事</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>【直播】PCL夏季赛周...</p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>532.8万</span>
                           </div>
                         </div>
                       </div>
@@ -2143,18 +2267,20 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop5.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>小潮院长</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>
+                            小潮院长的直播间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          </p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>403.8万</span>
                           </div>
                         </div>
                       </div>
@@ -2167,18 +2293,18 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop6.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>AG超玩会王者荣耀梦泪</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>泪六满面：CFS世界总...</p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>304.7万</span>
                           </div>
                         </div>
                       </div>
@@ -2191,18 +2317,18 @@
                   <a href="">
                     <div class="icon">
                       <div class="icons">
-                        <img src="./imgs/saishi1.webp" alt="" />
+                        <img src="./imgs/zhibop7.webp" alt="" />
                       </div>
                       <div class="forecast">
                         <span>
                           <img src="./imgs/live.gif" alt="" />
-                          <h3>哔哩哔哩英雄联盟赛事</h3>
+                          <h3>原神UP主邀请赛</h3>
                         </span>
                         <div>
-                          <p>【预告】8.11 17:00...</p>
+                          <p>2022原神UP主邀请赛 ...</p>
                           <div>
                             <img src="./imgs/person.png@48w" alt="" />
-                            <span>703.8万</span>
+                            <span>103.8万</span>
                           </div>
                         </div>
                       </div>
@@ -2294,7 +2420,7 @@
               </div>
               <div class="cartoonLeftHerderR">
                 <button>
-                  <svg style="transform: rotate(2880deg)">
+                  <svg style="transform: rotate(0deg)">
                     <use xlink:href="#widget-roll"></use>
                   </svg>
                   <span>换一换</span>
@@ -2307,7 +2433,56 @@
             </div>
             <!-- 左下 -->
             <div class="cartoonLeftFooter">
-              <!-- 1 -->
+              <!--            <div class="cartoonLeftFooterF">
+                <a
+                  href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+                  target="_blank"
+                >
+                  <div id="img5">
+                    <img src="./imgs/还得是草神.jpg" alt="" />
+                  </div>
+
+                  <video src="./imgs/还得是草神.mp4" muted></video>
+                </a>
+
+                <div class="cartoonTv">
+                  <div>
+                    <span>
+                      <svg class="bili-video-card__stats--icon">
+                        <use xlink:href="#widget-video-play-count"></use>
+                      </svg>
+                      <span>118.4万</span>
+                    </span>
+                    <span>
+                      <svg class="bili-video-card__stats--icon">
+                        <use xlink:href="#widget-video-danmaku"></use>
+                      </svg>
+                      <span>501</span>
+                    </span>
+                  </div>
+                  <span>00：16</span>
+                </div>
+                <div class="cartoonTvText">
+                  <h3>
+                    <a
+                      href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+                      >还得是草神🥵</a
+                    >
+                  </h3>
+                  <div>
+                    <a
+                      href="https://space.bilibili.com/5214277?spm_id_from=333.1007.partition_recommend.content.click"
+                    >
+                      <svg class="bili-video-card__info--owner__up">
+                        <use xlink:href="#widget-up"></use>
+                      </svg>
+                      <span>茉莉绿茶少糖</span>
+                      <span>· 7-27</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2357,7 +2532,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 2 -->
+            
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2407,7 +2582,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 3 -->
+              
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2457,7 +2632,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 4 -->
+              
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2507,7 +2682,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 5 -->
+             
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2557,7 +2732,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 6 -->
+              
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2607,7 +2782,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 7 -->
+              
               <div class="cartoonLeftFooterF">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -2656,57 +2831,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
-              <!-- 8 -->
-              <div class="cartoonLeftFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                  target="_blank"
-                >
-                  <div id="img5">
-                    <img src="./imgs/还得是草神.jpg" alt="" />
-                  </div>
-
-                  <video src="./imgs/还得是草神.mp4" muted></video>
-                </a>
-
-                <div class="cartoonTv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>118.4万</span>
-                    </span>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-danmaku"></use>
-                      </svg>
-                      <span>501</span>
-                    </span>
-                  </div>
-                  <span>00：16</span>
-                </div>
-                <div class="cartoonTvText">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                      >还得是草神🥵</a
-                    >
-                  </h3>
-                  <div>
-                    <a
-                      href="https://space.bilibili.com/5214277?spm_id_from=333.1007.partition_recommend.content.click"
-                    >
-                      <svg class="bili-video-card__info--owner__up">
-                        <use xlink:href="#widget-up"></use>
-                      </svg>
-                      <span>茉莉绿茶少糖</span>
-                      <span>· 7-27</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- 右 -->
@@ -3069,14 +3194,17 @@
                   <span>番剧</span>
                 </a>
                 <div class="bangumHeaderLTime">
-                  <button>最近更新</button>
-                  <button>周一</button>
-                  <button>周二</button>
-                  <button>周三</button>
-                  <button>周四</button>
-                  <button>周五</button>
-                  <button>周六</button>
-                  <button>周日</button>
+                  <div class="btn-item">
+                    <button class="button-active">最近更新</button>
+                    <button>周一</button>
+                    <button>周二</button>
+                    <button>周三</button>
+                    <button>周四</button>
+                    <button>周五</button>
+                    <button>周六</button>
+                    <button>周日</button>
+                  </div>
+                  <div class="activebg"></div>
                 </div>
               </div>
               <div class="bangumHeaderR">
@@ -3097,7 +3225,7 @@
             <!-- 番剧左下 -->
             <div class="bangumFooter">
               <!-- 1 -->
-              <div class="cartoonLeftFooterF">
+<!--               <div class="bangumLeftFooterF" data-week="1">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3107,7 +3235,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3118,7 +3246,44 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
+                  <h3>
+                    <a
+                      href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+                      >测不准的阿波连同学 中配版</a
+                    >
+                  </h3>
+                  <div>
+                    <a
+                      href="https://www.bilibili.com/bangumi/play/ep625441?spm_id_from=333.1007.partition_recommend.content.click"
+                    >
+                      <span>更新至第7话~第8话</span>
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+<!--               <div class="bangumLeftFooterF" data-week="3">
+                <a
+                  href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
+                  target="_blank"
+                >
+                  <div id="img5">
+                    <img src="./imgs/fanju1.webp" alt="" />
+                  </div>
+                </a>
+
+                <div class="bangumTv">
+                  <div>
+                    <span>
+                      <svg class="bili-video-card__stats--icon">
+                        <use xlink:href="#widget-video-play-count"></use>
+                      </svg>
+                      <span>118.4万</span>
+                    </span>
+                  </div>
+                  <span>1.1万追番</span>
+                </div>
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3134,7 +3299,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="2">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3144,7 +3309,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3155,7 +3320,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3171,7 +3336,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="4">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3181,7 +3346,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3192,7 +3357,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3208,7 +3373,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="5">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3218,7 +3383,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3229,7 +3394,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3245,7 +3410,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="6">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3255,7 +3420,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3266,7 +3431,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3282,7 +3447,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="7">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3292,7 +3457,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3303,7 +3468,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3319,7 +3484,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cartoonLeftFooterF">
+              <div class="bangumLeftFooterF" data-week="2">
                 <a
                   href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                   target="_blank"
@@ -3329,7 +3494,7 @@
                   </div>
                 </a>
 
-                <div class="cartoonTv">
+                <div class="bangumTv">
                   <div>
                     <span>
                       <svg class="bili-video-card__stats--icon">
@@ -3340,7 +3505,7 @@
                   </div>
                   <span>1.1万追番</span>
                 </div>
-                <div class="cartoonTvText">
+                <div class="bangumTvText">
                   <h3>
                     <a
                       href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
@@ -3355,44 +3520,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="cartoonLeftFooterF">
-                <a
-                  href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                  target="_blank"
-                >
-                  <div id="img5">
-                    <img src="./imgs/fanju1.webp" alt="" />
-                  </div>
-                </a>
-
-                <div class="cartoonTv">
-                  <div>
-                    <span>
-                      <svg class="bili-video-card__stats--icon">
-                        <use xlink:href="#widget-video-play-count"></use>
-                      </svg>
-                      <span>118.4万</span>
-                    </span>
-                  </div>
-                  <span>1.1万追番</span>
-                </div>
-                <div class="cartoonTvText">
-                  <h3>
-                    <a
-                      href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                      >测不准的阿波连同学 中配版</a
-                    >
-                  </h3>
-                  <div>
-                    <a
-                      href="https://www.bilibili.com/bangumi/play/ep625441?spm_id_from=333.1007.partition_recommend.content.click"
-                    >
-                      <span>更新至第7话~第8话</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- 番剧右 -->
@@ -3735,7 +3863,7 @@
             </div>
             <div class="DynamicHeaderR">
               <button>
-                <svg style="transform: rotate(2880deg)">
+                <svg style="transform: rotate(0deg)">
                   <use xlink:href="#widget-roll"></use>
                 </svg>
                 <span>换一换</span>
@@ -3747,8 +3875,7 @@
             </div>
           </div>
           <div class="DynamicFooter">
-            <!-- 1 -->
-            <div class="DynamicFooterF">
+            <!--             <div class="DynamicFooterF">
               <a
                 href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
                 target="_blank"
@@ -3782,331 +3909,7 @@
                   >
                 </h3>
               </div>
-            </div>
-            <!-- 2 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 4 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 5 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 6 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 7 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 8 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 9 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
-            <!-- 10 -->
-            <div class="DynamicFooterF">
-              <a
-                href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                target="_blank"
-              >
-                <div id="img6">
-                  <img src="./imgs/fanjudongtai1.webp" alt="" />
-                </div>
-              </a>
-
-              <div class="DynamicFooterTV">
-                <div>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-play-count"></use>
-                    </svg>
-                    <span>118.4万</span>
-                  </span>
-                  <span>
-                    <svg class="bili-video-card__stats--icon">
-                      <use xlink:href="#widget-video-danmaku"></use>
-                    </svg>
-                    <span>501</span>
-                  </span>
-                </div>
-              </div>
-              <div class="DynamicFooterText">
-                <h3>
-                  <a
-                    href="https://www.bilibili.com/video/BV12a411K7mT?spm_id_from=333.1007.partition_recommend.content.click"
-                    >【10月】我被逐出队伍后过上慢生活 08【独家正版】</a
-                  >
-                </h3>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- 漫画 -->
@@ -4257,7 +4060,7 @@
               <span>更多&nbsp;></span>
             </ul>
             <!-- 选项卡下 -->
-            <div class="items">
+            <div class="items arise">
               <ul>
                 <li class="one">
                   <span>1</span>
@@ -4337,7 +4140,7 @@
                 </li>
               </ul>
             </div>
-            <div class="items arise">
+            <div class="items">
               <ul>
                 <li class="one">
                   <span>1</span>
@@ -4433,7 +4236,7 @@
               </div>
               <div class="FeatureHeaderR">
                 <button>
-                  <svg style="transform: rotate(2880deg)">
+                  <svg style="transform: rotate(0deg)">
                     <use xlink:href="#widget-roll"></use>
                   </svg>
                   <span>换一换</span>
@@ -4446,7 +4249,7 @@
             </div>
             <!-- 左下 -->
             <div class="FeatureFooter">
-              <div class="FeatureFooterItem">
+              <!--               <div class="FeatureFooterItem">
                 <a
                   href="https://www.bilibili.com/read/cv17883694?spm_id_from=333.1007.partition_recommend.content.click"
                 >
@@ -4697,7 +4500,7 @@
                     <p>凤凰网</p>
                   </a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!-- 右侧 -->
@@ -4986,6 +4789,7 @@
     </div>
   </body>
   <script src="./js/svgfont.js"></script>
-  <script src="./js/1.js"></script>
+  <script src="./js/1.js" type="module"></script>
+  <script src="./js/banner.js"></script>
   <script src="./js/2.js"></script>
 </html>

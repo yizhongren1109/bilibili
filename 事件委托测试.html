@@ -49,8 +49,14 @@
       const ul = document.querySelector('ul')
       const item = document.querySelectorAll('.item')
       ul.addEventListener('click', (e) => {
-        console.log(e.target.dataset.index)
-        console.log(item[e.target.dataset.index - 1])
+
+        for (let i = 0; i < ul.children.length; i++) {
+          ul.children[i].innerText=ul.children[i].innerText.substr(0,2)      
+        }
+        if(e.target.innerText.indexOf("动态")==-1){
+          //ul.child.innerText=e.target.innerText.substr(0,2)
+          e.target.innerText.replace(e.target.innerText,e.target.innerText+="动态")
+        }
         item.forEach((item, index) => {
           if (index == e.target.dataset.index - 1) {
             item.classList.add('active')

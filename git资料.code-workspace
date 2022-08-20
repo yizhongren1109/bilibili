@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\git资料"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\2022-05前端"
+		},
+		{
+			"path": "..\\..\\vscode练习"
+		},
+		{
+			"path": "..\\12"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bilibili"
+	}
+}
