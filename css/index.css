@@ -1,5 +1,5 @@
 #app {
-  min-width: 1392px;
+  min-width: 1500px;
 }
 #app .topCon {
   width: 100%;
@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 #app .topCon .navigation {
-  width: 100%;
+  min-width: 1500px;
   height: 64px;
   display: flex;
   justify-content: space-between;
@@ -1495,6 +1495,7 @@
   width: 268px;
   height: 225px;
   position: relative;
+  overflow: hidden;
 }
 #app .mainCenter .delegators .delegatorsBottom .delegatorsB a #img2 {
   width: 268px;
@@ -1508,6 +1509,28 @@
 }
 #app .mainCenter .delegators .delegatorsBottom .delegatorsB a #img2 img {
   width: 100%;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a .danmu {
+  position: absolute;
+  display: flex;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+  left: 100%;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a .danmu li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a .danmu:nth-of-type(1) {
+  top: 0;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a .danmu:nth-of-type(2) {
+  top: 30px;
+}
+#app .mainCenter .delegators .delegatorsBottom .delegatorsB a .danmu:nth-of-type(3) {
+  top: 60px;
 }
 #app .mainCenter .delegators .delegatorsBottom .delegatorsB a video {
   display: block;
@@ -1623,6 +1646,7 @@
   width: 268px;
   height: 225px;
   position: relative;
+  overflow: hidden;
 }
 #app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a #img3 {
   width: 268px;
@@ -1636,6 +1660,28 @@
 }
 #app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a #img3 img {
   width: 100%;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a .danmu {
+  position: absolute;
+  display: flex;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+  left: 100%;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a .danmu li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a .danmu:nth-of-type(1) {
+  top: 0;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a .danmu:nth-of-type(2) {
+  top: 30px;
+}
+#app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a .danmu:nth-of-type(3) {
+  top: 60px;
 }
 #app .mainCenter .Competition .CompetitionBottom .CompetitionBottomF a video {
   display: block;
@@ -1834,6 +1880,7 @@
   width: 268px;
   height: 225px;
   position: relative;
+  overflow: hidden;
 }
 #app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a #img4 {
   width: 268px;
@@ -1847,6 +1894,28 @@
 }
 #app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a #img4 img {
   width: 100%;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a .danmu {
+  position: absolute;
+  display: flex;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+  left: 100%;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a .danmu li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a .danmu:nth-of-type(1) {
+  top: 0;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a .danmu:nth-of-type(2) {
+  top: 30px;
+}
+#app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a .danmu:nth-of-type(3) {
+  top: 60px;
 }
 #app .mainCenter .broadcast .broadcastLeft .broadcastFooter .broadcastFooterF a video {
   display: block;
@@ -2200,6 +2269,7 @@
   width: 268px;
   height: 225px;
   position: relative;
+  overflow: hidden;
 }
 #app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a #img5 {
   width: 268px;
@@ -2213,6 +2283,28 @@
 }
 #app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a #img5 img {
   width: 100%;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a .danmu {
+  position: absolute;
+  display: flex;
+  transition: all 0.1s linear;
+  white-space: nowrap;
+  left: 100%;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a .danmu li {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a .danmu:nth-of-type(1) {
+  top: 0;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a .danmu:nth-of-type(2) {
+  top: 30px;
+}
+#app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a .danmu:nth-of-type(3) {
+  top: 60px;
 }
 #app .mainCenter .cartoon .cartoonLeft .cartoonLeftFooter .cartoonLeftFooterF a video {
   display: block;
@@ -2868,6 +2960,10 @@
   font-size: 14px;
   color: inherit;
   border: none;
+}
+#app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderL .ComicHeaderType .arises {
+  background-color: #00aeec;
+  color: #fff;
 }
 #app .mainCenter .Comic .ComicLeft .ComicHeader .ComicHeaderR {
   font-size: 13px;

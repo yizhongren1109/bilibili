@@ -1,5 +1,5 @@
 #app {
-  min-width: 1392px;
+  min-width: 1500px;
   // 顶部容器
   .topCon {
     width: 100%;
@@ -11,7 +11,7 @@
 
     // 导航
     .navigation {
-      width: 100%;
+      min-width: 1500px;
       height: 64px;
       display: flex;
       justify-content: space-between;
@@ -1673,7 +1673,7 @@
           width: 268px;
           height: 225px;
           position: relative;
-
+          overflow: hidden;
           a {
             #img2 {
               width: 268px;
@@ -1689,7 +1689,28 @@
                 width: 100%;
               }
             }
-
+            .danmu {
+              position: absolute;
+              display: flex;
+              transition: all 0.1s linear;
+              white-space: nowrap;
+              left: 100%;
+              li {
+                font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                transition: all 0.5s linear;
+              }
+            }
+            .danmu:nth-of-type(1) {
+              top: 0;
+            }
+            .danmu:nth-of-type(2) {
+              top: 30px;
+            }
+            .danmu:nth-of-type(3) {
+              top: 60px;
+            }
             video {
               display: block;
               width: 268px;
@@ -1838,7 +1859,7 @@
           width: 268px;
           height: 225px;
           position: relative;
-
+          overflow: hidden;
           a {
             #img3 {
               width: 268px;
@@ -1853,6 +1874,28 @@
               img {
                 width: 100%;
               }
+            }
+            .danmu {
+              position: absolute;
+              display: flex;
+              transition: all 0.1s linear;
+              white-space: nowrap;
+              left: 100%;
+              li {
+                font-size: 14px;
+                font-weight: bold;
+                display: inline-block;
+                transition: all 0.5s linear;
+              }
+            }
+            .danmu:nth-of-type(1) {
+              top: 0;
+            }
+            .danmu:nth-of-type(2) {
+              top: 30px;
+            }
+            .danmu:nth-of-type(3) {
+              top: 60px;
             }
 
             video {
@@ -2106,7 +2149,7 @@
             width: 268px;
             height: 225px;
             position: relative;
-
+            overflow: hidden;
             a {
               #img4 {
                 width: 268px;
@@ -2122,7 +2165,28 @@
                   width: 100%;
                 }
               }
-
+              .danmu {
+                position: absolute;
+                display: flex;
+                transition: all 0.1s linear;
+                white-space: nowrap;
+                left: 100%;
+                li {
+                  font-size: 14px;
+                  font-weight: bold;
+                  display: inline-block;
+                  transition: all 0.5s linear;
+                }
+              }
+              .danmu:nth-of-type(1) {
+                top: 0;
+              }
+              .danmu:nth-of-type(2) {
+                top: 30px;
+              }
+              .danmu:nth-of-type(3) {
+                top: 60px;
+              }
               video {
                 display: block;
                 width: 268px;
@@ -2588,7 +2652,7 @@
             width: 268px;
             height: 225px;
             position: relative;
-
+            overflow: hidden;
             a {
               #img5 {
                 width: 268px;
@@ -2604,7 +2668,28 @@
                   width: 100%;
                 }
               }
-
+              .danmu {
+                position: absolute;
+                display: flex;
+                transition: all 0.1s linear;
+                white-space: nowrap;
+                left: 100%;
+                li {
+                  font-size: 14px;
+                  font-weight: bold;
+                  display: inline-block;
+                  transition: all 0.5s linear;
+                }
+              }
+              .danmu:nth-of-type(1) {
+                top: 0;
+              }
+              .danmu:nth-of-type(2) {
+                top: 30px;
+              }
+              .danmu:nth-of-type(3) {
+                top: 60px;
+              }
               video {
                 display: block;
                 width: 268px;
@@ -3341,6 +3426,10 @@
                 font-size: 14px;
                 color: inherit;
                 border: none;
+              }
+              .arises{
+                background-color: #00aeec;
+                color: #fff;
               }
             }
           }

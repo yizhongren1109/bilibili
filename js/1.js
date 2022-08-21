@@ -1,11 +1,16 @@
 import {
   videoData,
   barrage,
+  vs,
+  Livebarrage,
+  cartoonbarrage,
+  seobarrage,
   sinatvData,
   cartoonData,
   FeatureData,
   bangumData,
   bangumstateData,
+  ComicData,
 } from "./const.js";
 
 //顶部动画
@@ -212,8 +217,8 @@ import {
   };
   //弹幕js=========================================================
 
-  function renderBarrage() {
-    let danmubox = document.querySelectorAll(".first>a"),
+  function renderBarrage(danmuList = ".first>a", vsdata = barrage) {
+    let danmubox = document.querySelectorAll(danmuList),
       aaa = null;
     //弹幕
     // 随机颜色
@@ -230,7 +235,7 @@ import {
     }
     danmubox.forEach((item) => {
       let danmu = item.querySelectorAll(".danmu");
-      barrage.forEach((item1, index1) => {
+      vsdata.forEach((item1, index1) => {
         // 将数据分别给三个danmu加入数据
         danmu.forEach((item2, index2) => {
           // 将数据分成三份
@@ -315,7 +320,9 @@ import {
                 alt=""
               />
             </div>
-    
+            <ul class="danmu"></ul>
+            <ul class="danmu"></ul>
+            <ul class="danmu"></ul>
             <video
               src="${videosrc}"
               muted
@@ -368,6 +375,7 @@ import {
     broadcastFooter.innerHTML = str;
   };
   sinatvRender();
+  renderBarrage(".broadcastFooterF>a", Livebarrage);
   btn2.onclick = function () {
     svg2.style.transform == "rotate(360deg)"
       ? (svg2.style.transform = "rotate(0deg)")
@@ -380,10 +388,15 @@ import {
 
     sinatvRender();
     adddelegators(".broadcastFooterF>a", 0.2, ".broadcastFootertv");
+    renderBarrage(".broadcastFooterF>a", Livebarrage);
   };
+  //推广弹幕
+  renderBarrage(".delegatorsB>a", seobarrage);
   //赛事区域移入移出事件==========================================
 
   adddelegators(".CompetitionBottomF>a", 0.2, ".sinatv");
+  //弹幕
+  renderBarrage(".CompetitionBottomF>a", vs);
   //直播左移入移出事件==========================================
 
   adddelegators(".broadcastFooterF>a", 0.2, ".broadcastFootertv");
@@ -516,7 +529,9 @@ import {
               <div id="img5">
                 <img src="${imgsrc}" alt="" />
               </div>
-            
+              <ul class="danmu"></ul>
+              <ul class="danmu"></ul>
+              <ul class="danmu"></ul>
               <video src="${videosrc}" muted></video>
             </a>
             
@@ -562,6 +577,7 @@ import {
     cartoonLeftFooter.innerHTML = str;
   };
   cartoonrender();
+  renderBarrage(".cartoonLeftFooterF>a", cartoonbarrage);
   btn3.onclick = function () {
     svg3.style.transform == "rotate(360deg)"
       ? (svg3.style.transform = "rotate(0deg)")
@@ -578,6 +594,7 @@ import {
     // }
     cartoonrender();
     adddelegators(".cartoonLeftFooterF>a", 0.2, ".cartoonTv");
+    renderBarrage(".cartoonLeftFooterF>a", cartoonbarrage);
   };
   //动画移入移出=========================================
   adddelegators(".cartoonLeftFooterF>a", 0.2, ".cartoonTv");
@@ -885,6 +902,49 @@ import {
   };
   bangumstateRender(bangumstateData.filter((item) => item.recently == "1"));
 
+  //漫画区域=================================
+  let ComicFooter = document.querySelector(".ComicFooter");
+  let btn6 = document.querySelectorAll(".ComicHeaderType>button");
+  const ComicRender = function ComicRender(Data) {
+    let str = ``;
+    Data.forEach((item) => {
+      const { ep_cover, font, title } = item;
+      str += `<div class="ComicFooterfirst">
+<div class="ComicFooterfirstT">
+  <img src="${ep_cover}"  alt="" />
+</div>
+<div class="ComicFooterfirstB">
+  <h3>${font}</h3>
+  <p>${title}</p>
+</div>
+</div>`;
+    });
+    ComicFooter.innerHTML = str;
+
+  };
+
+  ComicRender(ComicData.filter((item) => item.id == "1"));
+  //选项切换
+  btn6.forEach((item1, index) => {
+    item1.onclick = function () {
+      btn6.forEach((item2) => {
+        item2.classList.remove("arises");
+      });
+      if (index == 0) {
+        ComicRender(ComicData.filter((item) => item.id == "1"));
+      } else {
+        ComicRender(ComicData.filter((item) => item.id == "2"));
+      }
+      item1.classList.add("arises");
+    };
+  });
+  const changebtn = document.querySelector(".ComicHeaderR button");
+  changebtn.onclick = () => {
+    if (btn6[1].className == "arises") return;
+    ComicData.reverse();
+    ComicRender(ComicData.filter((item) => item.id == "1"));
+  };
+
   //回到顶部
 
   const btnscroll = document.querySelector(".btn2");
@@ -915,21 +975,19 @@ import {
   //遮罩层效果===================================================
   const mask = document.querySelector(".zone-mask");
   const zone = document.querySelector(".zone");
-  const zoneBtn=document.querySelector('.innerFooterWrap .innerFooterWrapItem')
-  const innerBox=document.querySelector('.zone-mask .inner')
+  const innerBox = document.querySelector(".zone-mask .inner");
 
-  zone.addEventListener('click',function () {
+  zone.addEventListener("click", function () {
     mask.style.opacity = 1;
     mask.style.visibility = "visible";
-    innerBox.style.right=0
+    innerBox.style.right = 0;
   });
-  mask.addEventListener('click',function(e){
+  mask.addEventListener("click", function (e) {
     mask.style.opacity = 0;
     mask.style.visibility = "hidden";
-    innerBox.style.right='-100%'
-  })
-  innerBox.addEventListener('click',(e)=>{
-    e.stopPropagation()
-  })
-
+    innerBox.style.right = "-100%";
+  });
+  innerBox.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 })();
